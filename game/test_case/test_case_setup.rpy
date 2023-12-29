@@ -917,23 +917,23 @@ label evidence_fill_1:
             elif current_item == "Black Fabric":
                 $ evidence_button_text_black_fabric = "Was taken from by "
             elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was left by "
+                $ evidence_button_text_champagne = "Was taken from by "
             elif current_item == "Body":
-                $ evidence_button_text_body = "Was left by "
+                $ evidence_button_text_body = "Was taken from by "
             elif current_item == "Head":
-                $ evidence_button_text_head = "Was left by "
+                $ evidence_button_text_head = "Was taken from by "
             elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was left by "
+                $ evidence_button_text_broken_door = "Was taken from by "
             elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was left by "
+                $ evidence_button_text_footprints = "Was taken from by "
             elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was left by "
+                $ evidence_button_text_security_system = "Was taken from by "
             elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was left by "
+                $ evidence_button_text_purse = "Was taken from by "
             elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was left by "
+                $ evidence_button_text_wedding_ring = "Was taken from by "
             elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was left by "
+                $ evidence_button_text_bite = "Was taken from by "
 
             jump evidence_fill_person
 
@@ -1146,6 +1146,9 @@ label evidence_fill_1:
                 $ evidence_button_text_bite = "Was broken by "
 
             jump evidence_fill_person
+
+            ## used by??
+            ## remove "written" and "worn"
 
 label evidence_fill_person:
     menu:
@@ -1376,11 +1379,14 @@ label conclusion_grading:
                 "...Right?"
                 $ evidence_button_text_black_fabric = "???"
                 $ evidence_button_text_head = "Who did it?"
+                jump end_grading
 
     else:
         jump end_grading
 
 label end_grading:
+    python:
+        renpy.retain_after_load()
     if current_scene == "maddies_backyard_scene":
         call screen maddies_backyard_scene
     elif current_scene == "jasons_house_scene":
