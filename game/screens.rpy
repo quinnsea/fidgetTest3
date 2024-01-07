@@ -346,15 +346,15 @@ screen mash_screen:
         $ start_key = "q"
 
     if start_key == "q":
-        $ qte_image = "dnd_test_files/UI/view-inventory-item-hover.png"
+        $ qte_image = "images/levi_eyecontact.png"
 
     elif start_key == "w":
-        $ qte_image = "dnd_test_files/UI/use-inventory-item-hover.png"
+        $ qte_image = "images/levi_smile.png"
 
     elif start_key == "2":
-        $ qte_image = "dnd_test_files/UI/inventory-arrow-left-enabled-hover.png"
+        $ qte_image = "images/levi_breathe.png"
 
-    image qte_image xalign 0.5 ypos 600 alpha (mash_count/max_mash)
+    image qte_image xalign 0.5 ypos 450 alpha (mash_count/max_mash)
 
     key "K_q" action [Function(handleMash, "e"), Show("mash_screen"), Hide("mash_screen")] # head scratch = humility/humble
     key "K_e" action [Function(handleMash, "q"), Show("mash_screen"), Hide("mash_screen")] # ^^^
@@ -372,7 +372,7 @@ default total_time = 5.0
 default do_start_timer = False
 
 screen countdown:
-    timer 0.01 repeat True action If(current_time > 0.0, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Jump(fail_label)))
+    timer 0.01 repeat True action If(current_time > 0.0, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Show("fail_screen"), Jump(fail_label)))
 
     bar:
         value current_time
@@ -391,6 +391,8 @@ screen countdown:
     if is_mashing:
         use mash_screen
 
+screen fail_screen:
+    add "images/levi_fail.png"
 ## Quick Menu screen ###########################################################
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-game
