@@ -499,6 +499,10 @@ default option_num = 0
 #        linear 0.6 alpha 0.0
 
 ## might need to duplicate this and make an "a" and "b" to create deductions
+## or maybe make the person it belongs to a new screen with images of everyone's faces and their names
+## like the "court record" david was talking about (maybe also give each person a little icon you can click on to give a brief description)
+
+## descs could also open up the door for the "remember" mechanic, and if you store the right piece of dialogue you might have extra dialogue to use against someone else
 screen dropdown_menu():
     modal True
     zorder 5
