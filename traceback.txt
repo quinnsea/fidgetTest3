@@ -1,82 +1,76 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While running game code:
-  File "game/test_case/test_case_setup.rpy", line 812, in script
-    call screen maddies_house_scene
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 502, in execute
-    screen dropdown_menu():
-  File "game/test_case/test_case_setup.rpy", line 502, in execute
-    screen dropdown_menu():
-  File "game/test_case/test_case_setup.rpy", line 510, in execute
+After initialization, but before game start.
+  File "game/test_case/test_case_setup.rpy", line 551, in prepare_screen
+    screen inspectItem(items):
+  File "game/test_case/test_case_setup.rpy", line 551, in prepare
+    screen inspectItem(items):
+  File "game/test_case/test_case_setup.rpy", line 554, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 554, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 587, in prepare
+    if item_name == "Roses":
+  File "game/test_case/test_case_setup.rpy", line 597, in prepare
+    elif item_name == "Grocery List":
+  File "game/test_case/test_case_setup.rpy", line 598, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 598, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 601, in prepare
     frame:
-  File "game/test_case/test_case_setup.rpy", line 513, in execute
-    has hbox
-  File "game/test_case/test_case_setup.rpy", line 514, in execute
-    for option in evidence_options_list:
-  File "game/test_case/test_case_setup.rpy", line 515, in execute
-    if option.index == 0:
-  File "game/test_case/test_case_setup.rpy", line 519, in execute
-    python:
-  File "game/test_case/test_case_setup.rpy", line 520, in <module>
-    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
-TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+  File "game/test_case/test_case_setup.rpy", line 601, in prepare
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 602, in prepare
+    text "{}".format(evidence_button_text_{}.format(item_name)) + " ▼"
+SyntaxError: invalid syntax (game/test_case/test_case_setup.rpy, line 602)
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 812, in script
-    call screen maddies_house_scene
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 502, in execute
-    screen dropdown_menu():
-  File "game/test_case/test_case_setup.rpy", line 502, in execute
-    screen dropdown_menu():
-  File "game/test_case/test_case_setup.rpy", line 510, in execute
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\bootstrap.py", line 275, in bootstrap
+    renpy.main.main()
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\main.py", line 670, in main
+    run(restart)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\main.py", line 93, in run
+    renpy.display.screen.prepare_screens()
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 1003, in prepare_screens
+    s.ast.prepare_screen()
+  File "game/test_case/test_case_setup.rpy", line 551, in prepare_screen
+    screen inspectItem(items):
+  File "game/test_case/test_case_setup.rpy", line 551, in prepare
+    screen inspectItem(items):
+  File "game/test_case/test_case_setup.rpy", line 554, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 554, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 587, in prepare
+    if item_name == "Roses":
+  File "game/test_case/test_case_setup.rpy", line 597, in prepare
+    elif item_name == "Grocery List":
+  File "game/test_case/test_case_setup.rpy", line 598, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 598, in prepare
+    button:
+  File "game/test_case/test_case_setup.rpy", line 601, in prepare
     frame:
-  File "game/test_case/test_case_setup.rpy", line 513, in execute
-    has hbox
-  File "game/test_case/test_case_setup.rpy", line 514, in execute
-    for option in evidence_options_list:
-  File "game/test_case/test_case_setup.rpy", line 515, in execute
-    if option.index == 0:
-  File "game/test_case/test_case_setup.rpy", line 519, in execute
-    python:
-  File "game/test_case/test_case_setup.rpy", line 520, in <module>
-    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
-TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+  File "game/test_case/test_case_setup.rpy", line 601, in prepare
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 602, in prepare
+    text "{}".format(evidence_button_text_{}.format(item_name)) + " ▼"
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\py3analysis.py", line 808, in ast_eval
+    return self.ast_eval_literal(expr)[0]
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\py3analysis.py", line 790, in ast_eval_literal
+    expr = py_compile(expr, 'eval', ast_node=True)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\python.py", line 1088, in py_compile
+    raise e
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\python.py", line 1034, in py_compile
+    raise orig_e
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\python.py", line 1027, in py_compile
+    tree = compile(source, filename, py_mode, ast.PyCF_ONLY_AST | flags, 1)
+SyntaxError: invalid syntax (game/test_case/test_case_setup.rpy, line 602)
 
-Windows-10-10.0.22621 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
 detective test 1.2
-Sun Jan  7 13:50:45 2024
+Mon Jan  8 23:48:02 2024

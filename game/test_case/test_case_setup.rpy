@@ -480,27 +480,29 @@ default evidence_button_text_bite = "???"
 
 default current_item = ""
 
-default evidence_options_list = ["who", "what", "when", "where"]
-default dropdown_slot_padding = 20
-default dropdown_pos = 0
+default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"] ##this is obviously placeholders
+default evidence_options_list_b = ["Deja", "Taffy", "Maddie"] ## update this list when discovering new people
+default dropdown_state = "V"
+default dropdown_visible = False
+default option_num = 0
 
-transform slide:
-    yoffset -50
-    easein 0.3 yoffset 0
-    on hide:
-        easeout 0.3 yoffset -100
+#transform slide:
+#    yoffset -50
+#    easein 0.3 yoffset 0
+#    on hide:
+#        easeout 0.3 yoffset -100
 
-transform appear:
-    alpha 0.0
-    linear 0.6 alpha 1.0
-    on hide:
-        linear 0.6 alpha 0.0
+#transform appear:
+#    alpha 0.0
+#    linear 0.6 alpha 1.0
+#    on hide:
+#        linear 0.6 alpha 0.0
 
-screen triangle():
-    textbutton "V" action Show("dropdown_menu") align (1.0, 0.0)
-
+## might need to duplicate this and make an "a" and "b" to create deductions
 screen dropdown_menu():
     modal True
+    zorder 5
+    $ current_item = current_item.replace(" ", "_").lower()
 
     button:
         # everything outside the frame is a transparent button to hide the screen
@@ -508,36 +510,24 @@ screen dropdown_menu():
         action Hide("dropdown_menu")
 
     frame:
-        align (1.0, 0.0)
-        at slide
-        has hbox
-        for option in evidence_options_list:
-            if option.index == 0:
-                textbutton option:
-                    action Show("option1_screen")
-            else:
-                python:
-                    dropdown_pos = (dropdown_slot_padding + 20)
-                textbutton option:
-                    ypos dropdown_pos
-                    action Hide("dropdown_menu")
-        textbutton "^" action Hide("dropdown_menu")
+        align (0.6, 0.65)
+        ysize 200
+        xsize 350
 
-screen option1_screen():
-    modal True
+        viewport id "vp":
+            mousewheel True
+            draggable True
 
-    frame:
-        xysize (400, 500)
-        align (0.5, 0.5)
-        at appear
+            vbox:
+                spacing 2
 
-        has vbox
-        text "ummmmm not sure what should go here"
+                for option in evidence_options_list_a:
+                    $ option_num = evidence_options_list_a.index(option)
+                    textbutton option:
+                        xpos 20
+                        action [SetVariable("evidence_button_text_{}".format(current_item), option), Hide("dropdown_menu")]
 
-        textbutton "Close 2 screens":
-            action [Hide("option1_screen"), Hide("dropdown_menu")]
-        textbutton "Close 1 screen":
-            action Hide("option1_screen")
+        vbar value YScrollValue("vp")
 
 screen inspectItem(items):
     modal True
@@ -545,7 +535,7 @@ screen inspectItem(items):
     button:
         xfill True
         yfill True
-        action If(len(items) > 1, true=RemoveFromSet(items, items[0]), false=[Hide("inspectItem"), If(len(dnd_dialogue) > 0, true=Show("characterSay"), false=NullAction())])
+        action [If(len(items) > 1, true=RemoveFromSet(items, items[0]), false=[Hide("inspectItem"), If(len(dnd_dialogue) > 0, true=Show("characterSay"), false=NullAction())]), Hide("dropdown_menu"), SetVariable("dropdown_state", "V")]
         image "dnd_test_files/Items Pop Up/items-pop-up-bg.png" align (0.5, 0.5)
         if "mail" in inventory_items:
             $ mail_state = inventory_sprites[inventory_items.index("mail")].state
@@ -574,75 +564,78 @@ screen inspectItem(items):
         text "{}".format(item_name) size 30 align (0.5, 0.28) color "#000000"
         text "{}".format(item_desc) size 25 align (0.6, 0.4) ## show the description to the right of the image below
 
-        ## add a button that opens a specific choice menu that lets you figure out what makes this evidence matter
-        if item_name == "Roses":
-            textbutton evidence_button_text_roses:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
-        elif item_name == "Mail":
-            textbutton evidence_button_text_mail:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+        if item_name == "Mail":
+            button:
+                align (0.6, 0.56)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text "▼ " + evidence_button_text_mail
         elif item_name == "Grocery List":
-            #textbutton evidence_button_text_grocery_list:
-            #    yalign 0.7
-            #    xalign 0.5
-            #    action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
-            python:
-                renpy.show_screen("triangle")
-
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_grocery_list + " ▼"
         elif item_name == "Black Fabric":
-            textbutton evidence_button_text_black_fabric:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_black_fabric + " ▼"
         elif item_name == "Champagne":
-            textbutton evidence_button_text_champagne:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_champagne + " ▼"
         elif item_name == "Body":
-            textbutton evidence_button_text_body:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_body + " ▼"
         elif item_name == "Head":
-            textbutton evidence_button_text_head:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_head + " ▼"
         elif item_name == "Broken Door":
-            textbutton evidence_button_text_broken_door:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_broken_door + " ▼"
         elif item_name == "Footprints":
-            textbutton evidence_button_text_footprints:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_footprints + " ▼"
         elif item_name == "Security System":
-            textbutton evidence_button_text_security_system:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_security_system + " ▼"
         elif item_name == "Wedding Ring":
-            textbutton evidence_button_text_wedding_ring:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_wedding_ring + " ▼"
         elif item_name == "Purse":
-            textbutton evidence_button_text_purse:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_purse + " ▼"
         elif item_name == "Bite":
-            textbutton evidence_button_text_bite:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            button:
+                align (0.5, 0.7)
+                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+                frame:
+                    text evidence_button_text_bite + " ▼"
 
 screen characterSay(who = None, what = None): ## default values
     modal True ## prevent interactions from happening underneath dialogue as it's showing

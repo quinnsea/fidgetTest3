@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
-    dropdown_pos = (dropdown_spot_padding * option.index + 1))
-                                                              ^
+File "game/test_case/test_case_setup.rpy", line 594: 'color' is not a keyword argument or valid child of the textbutton statement.
+    color "#000000"
+         ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Jan  7 13:46:38 2024
+Mon Jan  8 22:39:26 2024
