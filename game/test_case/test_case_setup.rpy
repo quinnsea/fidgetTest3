@@ -480,6 +480,65 @@ default evidence_button_text_bite = "???"
 
 default current_item = ""
 
+default evidence_options_list = ["who", "what", "when", "where"]
+default dropdown_slot_padding = 20
+default dropdown_pos = 0
+
+transform slide:
+    yoffset -50
+    easein 0.3 yoffset 0
+    on hide:
+        easeout 0.3 yoffset -100
+
+transform appear:
+    alpha 0.0
+    linear 0.6 alpha 1.0
+    on hide:
+        linear 0.6 alpha 0.0
+
+screen triangle():
+    textbutton "V" action Show("dropdown_menu") align (1.0, 0.0)
+
+screen dropdown_menu():
+    modal True
+
+    button:
+        # everything outside the frame is a transparent button to hide the screen
+        background None
+        action Hide("dropdown_menu")
+
+    frame:
+        align (1.0, 0.0)
+        at slide
+        has hbox
+        for option in evidence_options_list:
+            if option.index == 0:
+                textbutton option:
+                    action Show("option1_screen")
+            else:
+                python:
+                    dropdown_pos = (dropdown_slot_padding + 20)
+                textbutton option:
+                    ypos dropdown_pos
+                    action Hide("dropdown_menu")
+        textbutton "^" action Hide("dropdown_menu")
+
+screen option1_screen():
+    modal True
+
+    frame:
+        xysize (400, 500)
+        align (0.5, 0.5)
+        at appear
+
+        has vbox
+        text "ummmmm not sure what should go here"
+
+        textbutton "Close 2 screens":
+            action [Hide("option1_screen"), Hide("dropdown_menu")]
+        textbutton "Close 1 screen":
+            action Hide("option1_screen")
+
 screen inspectItem(items):
     modal True
     zorder 4
@@ -527,10 +586,13 @@ screen inspectItem(items):
                 xalign 0.5
                 action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
         elif item_name == "Grocery List":
-            textbutton evidence_button_text_grocery_list:
-                yalign 0.7
-                xalign 0.5
-                action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            #textbutton evidence_button_text_grocery_list:
+            #    yalign 0.7
+            #    xalign 0.5
+            #    action [SetVariable("current_item", item_name), Hide("inspectItem"), Jump("evidence_fill_1")]
+            python:
+                renpy.show_screen("triangle")
+
         elif item_name == "Black Fabric":
             textbutton evidence_button_text_black_fabric:
                 yalign 0.7

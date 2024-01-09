@@ -1,90 +1,82 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
-While loading <renpy.display.im.Image object ('test_case/evidence popup/security_system_popup.png') at 0x0000000005aba340>:
-  File "game/test_case/test_case_setup.rpy", line 854, in script
-    call screen jasons_house_scene
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
   File "renpy/common/000statements.rpy", line 670, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-OSError: Couldn't find file 'test_case/evidence popup/security_system_popup.png'.
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 854, in script
-    call screen jasons_house_scene
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
     self.call("execute")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
     return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
     return method(parsed, *args, **kwargs)
   File "renpy/common/000statements.rpy", line 670, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
     rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4172, in interact_core
-    self.draw_screen(root_widget, fullscreen_video, (not fullscreen_video) or video_frame_drawn)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 2779, in draw_screen
-    surftree = renpy.display.render.render_screen(
-  File "render.pyx", line 492, in renpy.display.render.render_screen
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 731, in render
-    child = renpy.display.render.render(self.child, w, h, st, at)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\behavior.py", line 944, in render
-    rv = super(Button, self).render(width, height, st, at)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 1336, in render
-    surf = render(child,
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\layout.py", line 886, in render
-    surf = render(child, width, height, cst, cat)
-  File "render.pyx", line 170, in renpy.display.render.render
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\transform.py", line 909, in render
-    return RenderTransform(self).render(width, height, st, at)
-  File "accelerator.pyx", line 979, in renpy.display.accelerator.RenderTransform.render
-  File "accelerator.pyx", line 404, in renpy.display.accelerator.RenderTransform.render_child
-  File "render.pyx", line 266, in renpy.display.render.render
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\im.py", line 676, in render
-    return cache.get(self, render=True)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\im.py", line 330, in get
-    surf = image.load()
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\im.py", line 803, in load
-    raise e
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\im.py", line 757, in load
-    filelike = renpy.loader.load(self.filename, directory="images")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\loader.py", line 833, in load
-    raise IOError("Couldn't find file '%s'." % name)
-OSError: Couldn't find file 'test_case/evidence popup/security_system_popup.png'.
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
 
-Windows-10-10.0.19045 AMD64
+Windows-10-10.0.22621 AMD64
 Ren'Py 8.1.1.23060707
-fidgetTest3 1.0
-Tue Dec 19 19:15:26 2023
+detective test 1.2
+Sun Jan  7 13:50:45 2024

@@ -2,13 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/test_case/test_case_setup.rpy", line 1382: elif clause expects a non-empty block.
-    elif evidence_button_text_mail == "Was written by Maddie" and and evidence_button_text_head == "Was left by Maddie":
-                                                                                                                        ^
-
-File "game/test_case/test_case_setup.rpy", line 1384: expected statement.
-    else:
-        ^
+File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                                                              ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Tue Dec 19 19:47:01 2023
+Sun Jan  7 13:46:38 2024

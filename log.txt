@@ -1,25 +1,25 @@
-Mon Jan  1 19:17:41 2024
-Windows-10-10.0.19045
+Sun Jan  7 13:36:16 2024
+Windows-10-10.0.22621
 Ren'Py 8.1.1.23060707
  
 
-Bootstrap to the start of init.init. took 0.03s
+Bootstrap to the start of init.init. took 0.04s
 Early init. took 0.00s
-Loader init. took 0.04s
-Loading error handling. took 0.08s
-Loading script. took 0.85s
-Loading save slot metadata. took 0.10s
+Loader init. took 0.02s
+Loading error handling. took 0.03s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.04s
 Loading persistent. took 0.00s
-Running init code. took 0.05s
+Running init code. took 0.04s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.09s
+Reloading save slot metadata. took 0.02s
 Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.02s
+Initial gc. took 0.03s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
@@ -27,23 +27,1695 @@ Creating interface object. took 0.00s
 Cleaning stores took 0.00s
 Init translation took 0.03s
 Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.02s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.06s
+Prepare screens took 0.07s
 Save pyanalysis. took 0.02s
-Save bytecode. took 0.03s
+Save bytecode. took 0.04s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 49.32s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.03s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 67.75s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.27s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.08s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 154.31s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.26s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 515: 'option' is not a keyword argument or valid child of the textbutton statement.
+    option action Show("option1_screen")
+          ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.10s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 348.86s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.26s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 516: 'option' is not a keyword argument or valid child of the textbutton statement.
+    option action Show("option1_screen")
+          ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 374.70s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.33s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
 Running _start took 0.00s
 Performance test:
 Interface start. took 0.06s
 
 Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
+primary display bounds: (0, 0, 1366, 768)
 swap interval: 1 frames
 Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    ypos dropdown_slot_padding * (option.index + 1)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    ypos dropdown_slot_padding * (option.index + 1)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 402.17s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.03s
+Save screen analysis took 0.03s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Screen sizes: virtual=(1920, 1080) physical=(1366, 697) drawable=(1366, 697)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    ypos dropdown_slot_padding * (option.index + 1.0)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'float'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    ypos dropdown_slot_padding * (option.index + 1.0)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'float'
+Resetting cache.
+Bootstrap to the start of init.init. took 417.84s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.25s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 514.91s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.31s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    yoffset dropdown_slot_padding * (option.index + 1)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    yoffset dropdown_slot_padding * (option.index + 1)
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 530.40s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    yoffset (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 809, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 501, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 509, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 512, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 518, in execute
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 518, in keywords
+    textbutton option:
+  File "game/test_case/test_case_setup.rpy", line 519, in <module>
+    yoffset (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 542.80s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.03s
+Analyze screens took 0.00s
+Save screen analysis took 0.00s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.00s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 555.16s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.11s
+Save pyanalysis. took 0.03s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 590.35s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.26s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 519: 'dropdown_pos' is not a keyword argument or valid child of the for statement.
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.17s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 616.16s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.29s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                                                              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 619.86s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                                                              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 621.42s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                                                              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 622.17s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/test_case/test_case_setup.rpy", line 520: unmatched ')'
+    dropdown_pos = (dropdown_spot_padding * option.index + 1))
+                                                              ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 631.37s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.27s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.04s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.02s
+Save screen analysis took 0.02s
+Prepare screens took 0.10s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_spot_padding * (option.index + 1))
+NameError: name 'dropdown_spot_padding' is not defined
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_spot_padding * (option.index + 1))
+NameError: name 'dropdown_spot_padding' is not defined
+Resetting cache.
+Bootstrap to the start of init.init. took 649.95s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.28s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.08s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 668.40s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.33s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (option.index + 1)).float
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (option.index + 1)).float
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 729.12s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.27s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    option.y = (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    option.y = (dropdown_slot_padding * (option.index + 1))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 818.78s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.27s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = int(input((dropdown_slot_padding * (option.index + 1))))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = int(input((dropdown_slot_padding * (option.index + 1))))
+TypeError: unsupported operand type(s) for +: 'builtin_function_or_method' and 'int'
+Resetting cache.
+Bootstrap to the start of init.init. took 865.95s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.29s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 812, in script
+    call screen maddies_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 502, in execute
+    screen dropdown_menu():
+  File "game/test_case/test_case_setup.rpy", line 510, in execute
+    frame:
+  File "game/test_case/test_case_setup.rpy", line 513, in execute
+    has hbox
+  File "game/test_case/test_case_setup.rpy", line 514, in execute
+    for option in evidence_options_list:
+  File "game/test_case/test_case_setup.rpy", line 515, in execute
+    if option.index == 0:
+  File "game/test_case/test_case_setup.rpy", line 519, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 520, in <module>
+    dropdown_pos = (dropdown_slot_padding * (int(option.index) + 1))
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'builtin_function_or_method'
+Resetting cache.
+Bootstrap to the start of init.init. took 905.82s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.29s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.01s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.06s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.09s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.05s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1366, 768)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'Intel'"
+Renderer: b'Intel(R) UHD Graphics'
+Version: b'4.6.0 - Build 27.20.100.9365'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1184, 666) drawable=(1184, 666)
 Maximum texture size: 4096x4096

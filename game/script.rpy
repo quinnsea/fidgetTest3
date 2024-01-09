@@ -65,6 +65,8 @@ label start:
     "Purse with nothing in \nit. Found by the \nvictim's body.",
     "Jason was bitten. Looks \nlike he gets bitten \na lot."]
 
+    show screen triangle
+
     #"-- Hi! Let's explain a few things before you get started. --"
     #"-- This prototype is primarily around deducing and reaching a conclusion. --"
     #"-- The way the game can tell that you reached a conclusion is by your evidence notes. --"
