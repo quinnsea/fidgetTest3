@@ -40,6 +40,14 @@ init python:
 
                                     i_overlap = True
 
+                                    ## for each dictionary in the dictionary list, do a for loop for that dictionary
+                                    ## if the current_item.replace(" ", "_").lower() == item1.type, save it under temp_dict1
+                                    ## repeat for temp_dict2
+                                    ## if temp_dict1["item_search"] == item2.type OR temp_dict2["item_search"] == item1.type do the thing
+                                    ## elif item1.type OR item2.type is in the culprit list
+                                    ## set current_item to item1.type / item2.type (might have to do an elif statement for each item being a part of the culprit list)
+                                    ## call the relevant dialogue script
+
                                     if (item1.type == "grocery_list" or item1.type == "mail") and (item2.type == "grocery_list" or item2.type == "mail"): ## this is the only type of item that can be combined in this, rinse and repeat for all combineable items
 
                                         i_combine = True
@@ -60,12 +68,12 @@ init python:
 
                                         characterSay(who = "Levi", what = ["...Yeah, the handwriting on these match up.", "It's definitely Maddie's."], inspectItem = True)
 
-                                        inventory_SM.redraw(0)
+                                        inventory_SM.redraw(0) ## i think there's something wrong with this method
                                         renpy.restart_interaction()
 
                                         break
 
-                                    else:
+                                    else: ## if you combine with the last object on the list
 
                                         item1.x = item1.original_x
                                         item1.y = item1.original_y
@@ -172,55 +180,25 @@ init python:
 
                         if item.x <= x <= item.x + item.width and item.y <= y <= item.y + item.height: ## check if the mouse is in the hitbox
 
-                            if item.type == "grocery_list": ## checking the type of item to figure out what to do omg this is going to be a NIGHTMARE WITH A FULL GAME OF THESE
-                                addToInventory(["grocery_list"])
+                            ## if item.type.title() not in evidence_options_list_b addToInventory([item.type])
 
-                            elif item.type == "mail": ## if you try to call a say screen in a python function, it'll return an error according to the tut?
-                                characterSay(who = "", what = ["...Maddie's having an affair with Jason Hughes and wants to confront him about it?", "She's so pissed she handwrote the letter, but I wonder if it's actually her handwriting."])
-                                #renpy.call("box_label")
-                                addToInventory(["mail"])
-                                #characterSay(who = "Levi", what = ["It's locked. Wonder where the key is."]) ## wrapping in a list to make a distinction between ren'py say and our custom say that doesn't break the scene
+                            if item.type.title() not in evidence_options_list_b:
 
-                            elif item.type == "black_fabric":
-                                #renpy.call("doorvines_label")
-                                addToInventory(["black_fabric"])
+                                addToInventory([item.type])
 
-                            elif item.type == "champagne":
-                                #renpy.call("doorvines_label")
-                                addToInventory(["champagne"])
+                                for dict in dict_list:
 
-                            elif item.type == "body":
-                                #renpy.call("doorvines_label")
-                                addToInventory(["body"])
+                                    if dict["current_item"].replace(" ", "_").lower() == item.type:
 
-                            elif item.type == "head":
-                                characterSay(who = "", what = ["I check the mouth out of instinct.", "She's definitely a vampire. Right down to the black blood.", "Who got my target first?"])
-                                #renpy.call("doorvines_label")
-                                addToInventory(["head"])
+                                        if dict["found_dialogue"] != []:
 
-                            elif item.type == "security_system":
-                                #renpy.call("doorvines_label")
-                                addToInventory(["security_system"])
+                                            characterSay(who = "", what = dict["found_dialogue"])
 
-                            elif item.type == "wedding_ring":
-                                characterSay(who = "", what = ["Is it wrong to steal someone's wedding ring?", "...Not if it's a cheating whore."])
-                                #renpy.call("doorvines_label")
-                                addToInventory(["wedding_ring"])
+                                            break
 
-                            elif item.type == "purse":
-                                characterSay(who = "", what = ["...There's nothing in this purse?"])
-                                #renpy.call("doorvines_label")
-                                addToInventory(["purse"])
-
-                            elif item.type == "broken_door":
-                                characterSay(who = "", what = ["I try to open the door to the backyard, but there's no use. It's jammed.", "Still, good to know."])
-                                #renpy.call("doorvines_label")
-                                addToInventory(["broken_door"])
-
-                            elif item.type == "bite":
-                                characterSay(who = "", what = ["So a vampire killed him.", "I wonder if it was whoever killed the victim.", "It looks like he gets bitten a lot..."])
-                                #renpy.call("doorvines_label")
-                                addToInventory(["bite"])
+                            elif item.type in evidence_options_list_b:
+                                
+                                renpy.call("{}_intro".format(item.type))
 
                 global i_overlap, ie_overlap
                 i_overlap = False
@@ -228,7 +206,7 @@ init python:
 
     def startDrag(item):
 
-        global inventory_drag, item_dragged
+        global inventory_drag, item_dragged ## maybe get the item's index here???
         inventory_drag = True
         item_dragged = item.type
         inventory_SM.redraw(0)
@@ -459,7 +437,10 @@ screen inventoryItemMenu(item):
         xpos item.x
         ypos item.y ## was feeling p lazy when it came to resizing at this point, feel free to remove all "at two_third_size" and the transform for "two_third_size" when constructing. you're smart and sexy, you'll make everything the right size
 
-        $ dict_item_search = item.type.replace("_", " ").title()
+        $ dict_item_search = item.type.replace(" ", "_")
+
+        python:
+            print(dict_item_search)
 
         imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
         imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [Function(startDrag, item = item), Hide("inventoryItemMenu")]
@@ -471,6 +452,11 @@ default inspect_dict = {
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -479,7 +465,12 @@ default grocery_list_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Found on the fridge in \nMaddie's house.",
+    "desc": "Found on the fridge in Maddie's house.",
+    "item_search": "mail",
+    "item_search_remove": "grocery_list",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -488,7 +479,12 @@ default mail_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Found on a table in \nMaddie's house.",
+    "desc": "Found on a table in Maddie's house.",
+    "item_search": "grocery_list",
+    "item_search_remove": "grocery_list",
+    "new_state": "checked",
+    "found_dialogue": ["...Maddie's having an affair with Jason Hughes and wants to confront him about it?", "She's so pissed she handwrote the letter, but I wonder if it's actually her handwriting."],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -497,7 +493,12 @@ default black_fabric_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Caught on the fence in \nMaddie's backyard.",
+    "desc": "Caught on the fence in Maddie's backyard.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -506,7 +507,12 @@ default champagne_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Spilled on the floor in \nMaddie's house.",
+    "desc": "Spilled on the floor in Maddie's house.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -515,7 +521,12 @@ default body_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "A vampire. Already dead \nby the time I got \nthere. No wedding ring.",
+    "desc": "A vampire. Already dead by the time I got there. No wedding ring.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -524,7 +535,12 @@ default head_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "A vampire. Already dead \nby the time I got \nthere. Pretty lady.",
+    "desc": "A vampire. Already dead by the time I got there. Pretty lady.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": ["I check the mouth out of instinct.", "She's definitely a vampire. Right down to the black blood.", "Who got my target first?"],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -533,7 +549,12 @@ default broken_door_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Back door to Jason\'s. \nDoesn't really seem \nto work.",
+    "desc": "Back door to Jason\'s. Doesn't really seem to work.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": ["I try to open the door to the backyard, but there's no use. It's jammed.", "Still, good to know."],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -542,7 +563,12 @@ default security_system_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Jason\'s security system.\nLooks pretty old.",
+    "desc": "Jason\'s security system. Looks pretty old.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -551,7 +577,12 @@ default wedding_ring_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Jason\'s wedding ring. \n",
+    "desc": "Jason\'s wedding ring.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": ["Is it wrong to steal someone's wedding ring?", "...No. No, I don't really feel bad about it if it is."],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -560,7 +591,12 @@ default footprints_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Jason\'s, mine, and likely \nthe victim's. Still mad \nI ruined these.",
+    "desc": "Jason\'s, mine, and likely the victim's. Still mad I ruined these.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -569,7 +605,12 @@ default purse_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Purse with nothing in \nit. Found by the \nvictim's body.",
+    "desc": "Purse with nothing in it. Found by the victim's body.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": ["...There's nothing in this purse?"],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -578,7 +619,12 @@ default bite_dict = {
     "action": "???",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Jason was bitten. Looks \nlike he gets bitten \na lot.",
+    "desc": "Jason was bitten. Looks like he gets bitten \na lot.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": ["So a vampire killed him.", "I wonder if it was whoever killed the victim.", "It looks like he gets bitten a lot..."],
+    "combine_dialogue": [],
     "deduction": ""
 }
 
@@ -586,27 +632,148 @@ default dict_list = []
 
 default current_item = ""
 
+default suspect_bio = {
+    "current_item": "",
+    "action": "",
+    "culprit_image": "",
+    "culprit_name": "",
+    "desc": "",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
+    "deduction": ""
+}
+
+default deja_bio = {
+    "current_item": "Deja",
+    "action": "",
+    "culprit_image": "gui/profiles/deja_icon.png",
+    "culprit_name": "",
+    "desc": "My best friend and agent. She\'s the one who got me into vampire hunting. She\'s a bit of a gold digger and worships Mhel'kug.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
+    "deduction": ""
+}
+
+default maddie_bio = {
+    "current_item": "Maddie",
+    "action": "",
+    "culprit_image": "gui/profiles/maddie_icon.png",
+    "culprit_name": "",
+    "desc": "A director I like to work with a lot from the Northeast. She can get pretty moody, but it's only because she's an artist. I think.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
+    "deduction": ""
+}
+
+default taffy_bio = {
+    "current_item": "Taffy",
+    "action": "",
+    "culprit_image": "gui/profiles/taffy_icon.png",
+    "culprit_name": "",
+    "desc": "A writer that I may or may not heard of? He's worked with Carol on some projects, and he's a pretty big fan of mine. He seems nice.",
+    "item_search": "",
+    "item_search_remove": "",
+    "new_state": "",
+    "found_dialogue": [],
+    "combine_dialogue": [],
+    "deduction": ""
+}
+
 default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"]
 default evidence_options_list_b = ["Deja", "Taffy", "Maddie"] ## update this list when discovering new people
+default suspect_list_padding = 50
 default dropdown_visible = False
 
-default chosen_culprit_image = "default_image.png"
+default chosen_culprit_image = "gui/profiles/default_icon.png"
+default is_inspecting = ""
 
-#transform slide:
-#    yoffset -50
-#    easein 0.3 yoffset 0
-#    on hide:
-#        easeout 0.3 yoffset -100
+screen suspect_list():
+    modal True
+    zorder 10
 
-#transform appear:
-#    alpha 0.0
-#    linear 0.6 alpha 1.0
-#    on hide:
-#        linear 0.6 alpha 0.0
+    $ is_inspecting = renpy.get_screen("inspectItem")
 
-## might need to duplicate this and make an "a" and "b" to create deductions
-## or maybe make the person it belongs to a new screen with images of everyone's faces and their names
-## like the "court record" david was talking about (maybe also give each person a little icon you can click on to give a brief description)
+    button:
+        # everything outside the frame is a transparent button to hide the screen
+        background None
+        action Hide("suspect_list")
+
+    frame:
+        ysize 400
+        xsize 700
+        align (0.5, 0.5)
+
+        hbox:
+            spacing 50
+            xpos 50
+
+            for suspect in evidence_options_list_b:
+
+                if evidence_options_list_b.index(suspect) <= 2: ## needs a way to accommodate for multiple lines of suspects/people of interest, should probably compare to a list of possible suspects and fill with default profiles
+
+                    button:
+                        image "gui/profiles/{}_icon.png".format(suspect)
+                        ypos 50
+                        action If((is_inspecting != None), true=[SetDict(inspect_dict, "culprit_name", suspect),
+                        SetDict(inspect_dict, "culprit_image", "gui/profiles/{}_icon.png".format(suspect)),
+                        SetDict(inspect_dict, "deduction", inspect_dict["action"] + " " + inspect_dict["culprit_name"]),
+                        SetVariable("{}_dict".format(current_item), inspect_dict),
+                        Hide("suspect_list")], false=Show("suspect_info", suspect = suspect))
+
+        hbox:
+            spacing 125
+            xpos 90
+
+            for suspect in evidence_options_list_b:
+
+                textbutton suspect:
+                    ypos 225
+                    action If((is_inspecting != None), true=[SetDict(inspect_dict, "culprit_name", suspect),
+                    SetDict(inspect_dict, "culprit_image", "gui/profiles/{}_icon.png".format(suspect)),
+                    SetDict(inspect_dict, "deduction", inspect_dict["action"] + " " + inspect_dict["culprit_name"]),
+                    SetVariable("{}_dict".format(current_item), inspect_dict),
+                    Hide("suspect_list")], false=Show("suspect_info", suspect = suspect))
+
+screen suspect_info(suspect):
+    modal True
+    zorder 11
+
+    button:
+        # everything outside the frame is a transparent button to hide the screen
+        background None
+        action Hide("suspect_info")
+
+    for dict in dict_list:
+        if dict["current_item"] == suspect:
+            $ suspect_bio = dict
+
+    frame:
+        ysize 400
+        xsize 700
+        align (0.5, 0.5)
+
+        vbox:
+            xpos 50
+            yalign 0.4
+
+            image suspect_bio["culprit_image"]
+            text suspect ypos 25 xpos 25
+
+        hbox:
+            xsize 450
+            xpos 225
+            ypos 75
+
+            text suspect_bio["desc"]
 
 ## descs could also open up the door for the "remember" mechanic, and if you store the right piece of dialogue you might have extra dialogue to use against someone else
 screen dropdown_menu():
@@ -670,7 +837,7 @@ screen inspectItem(items):
                 if inventory_item_desc.index(desc) == inventory_item_names.index(item_name):
                     item_desc = desc
                 elif item_name == "Mail" and mail_state == "checked":
-                    item_desc = "Confirmed to be \nMaddie's handwriting."
+                    item_desc = "Confirmed to be Maddie's handwriting."
             ## get the description from a list
             ## check if the index of the item and the index of the description matches, and if it does you have your description
 
@@ -680,13 +847,17 @@ screen inspectItem(items):
             image "test_case/evidence popup/{}_popup.png".format(items[0]) at half_size align (0.4, 0.5)
 
         text "{}".format(inspect_dict["current_item"]) size 30 align (0.5, 0.28) color "#000000"
-        text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) ## show the description to the right of the image below
+        text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) xsize 300 ## show the description to the right of the image below
 
         button:
             align (0.6, 0.56)
             action [SetVariable("current_item", item_name), Show("dropdown_menu")]
             frame:
                 text "▼ " + inspect_dict["action"]
+
+        textbutton inspect_dict["culprit_name"]:
+            align (0.6, 0.7)
+            action Show("suspect_list")
 
 screen characterSay(who = None, what = None): ## default values
     modal True ## prevent interactions from happening underneath dialogue as it's showing
@@ -740,6 +911,13 @@ screen maddies_house_scene:
         align(0.9, 0.8)
         action [Hide("inventory"), Jump("setup_scene_jasons_house")]
         text "Go next door" color "#000000" size 18
+
+    button:
+        background "#FFFFFF"
+        padding(25, 10)
+        align(0.8, 0.8)
+        action Show("suspect_list")
+        text "Open suspects list" color "#000000" size 18
 
     imagebutton:
         auto "images/sprites/maddie_invest_%s.png" at half_size
@@ -905,6 +1083,7 @@ label setup_scene_jasons_house:
         ie_overlap = False
 
         if "footprints" not in inventory_items:
+            characterSay(who = "", what = ["Ah, damn.", "It looks like there were footprints going to this place.", "Could've been helpful if I didn't step all over them. Whoops."])
             addToInventory(["footprints"])
 
     python:
@@ -951,12 +1130,6 @@ label setup_scene_jasons_house:
                 renpy.retain_after_load()
 
     scene jasons_house
-
-    if seen_body == False:
-        $ seen_body = True
-        "Ah, damn."
-        "It looks like there were footprints going to this place."
-        "Could've been helpful if I didn't step all over them. Whoops."
 
     call screen jasons_house_scene
 

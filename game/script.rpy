@@ -49,9 +49,9 @@ label start:
     $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
 
     #$ environment_items = ["box", "door-vines", "key", "lantern"] # make sure these match up with the file names in the folder
-    $ inventory_item_names = ["Mail", "Grocery List", "Black Fabric", "Champagne", "Body", "Head", "Broken Door", "Security System", "Wedding Ring", "Footprints", "Purse", "Bite"]
-    $ environment_items = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite"]
-    $ dict_list = [mail_dict, grocery_list_dict, black_fabric_dict, champagne_dict, body_dict, head_dict, broken_door_dict, security_system_dict, wedding_ring_dict, footprints_dict, purse_dict, bite_dict]
+    $ inventory_item_names = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]
+    $ environment_items = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]
+    $ dict_list = [mail_dict, grocery_list_dict, black_fabric_dict, champagne_dict, body_dict, head_dict, broken_door_dict, security_system_dict, wedding_ring_dict, footprints_dict, purse_dict, bite_dict, deja_bio, maddie_bio, taffy_bio]
 
     #show screen triangle
 

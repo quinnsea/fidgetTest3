@@ -1,70 +1,74 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/test_case/test_case_setup.rpy", line 879, in script
+  File "game/test_case/test_case_setup.rpy", line 1061, in script
     call screen maddies_house_scene
   File "renpy/common/000statements.rpy", line 670, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 454, in execute
+  File "game/test_case/test_case_setup.rpy", line 465, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 454, in execute
+  File "game/test_case/test_case_setup.rpy", line 465, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 456, in execute
+  File "game/test_case/test_case_setup.rpy", line 467, in execute
     frame:
-  File "game/test_case/test_case_setup.rpy", line 462, in execute
-    python:
-  File "game/test_case/test_case_setup.rpy", line 464, in <module>
-    dict_item_search = item.type.replace("_", " ").capwords()
-AttributeError: 'str' object has no attribute 'capwords'
+  File "game/test_case/test_case_setup.rpy", line 478, in execute
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+  File "game/test_case/test_case_setup.rpy", line 478, in keywords
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+  File "game/test_case/test_case_setup.rpy", line 478, in <module>
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+ValueError: 'grocery_list' is not in list
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 879, in script
+  File "game/test_case/test_case_setup.rpy", line 1061, in script
     call screen maddies_house_scene
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
     self.call("execute")
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
     return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
     return method(parsed, *args, **kwargs)
   File "renpy/common/000statements.rpy", line 670, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
     rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
     repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
     root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
     d.visit_all(callback, seen)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
     callback(self)
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
     root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
     self.update()
-  File "C:\Users\quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
     self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 454, in execute
+  File "game/test_case/test_case_setup.rpy", line 465, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 454, in execute
+  File "game/test_case/test_case_setup.rpy", line 465, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 456, in execute
+  File "game/test_case/test_case_setup.rpy", line 467, in execute
     frame:
-  File "game/test_case/test_case_setup.rpy", line 462, in execute
-    python:
-  File "game/test_case/test_case_setup.rpy", line 464, in <module>
-    dict_item_search = item.type.replace("_", " ").capwords()
-AttributeError: 'str' object has no attribute 'capwords'
+  File "game/test_case/test_case_setup.rpy", line 478, in execute
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+  File "game/test_case/test_case_setup.rpy", line 478, in keywords
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+  File "game/test_case/test_case_setup.rpy", line 478, in <module>
+    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+ValueError: 'grocery_list' is not in list
 
-Windows-10-10.0.22621 AMD64
+Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
 detective test 1.2
-Tue Jan  9 18:13:58 2024
+Tue Jan  9 21:49:57 2024
