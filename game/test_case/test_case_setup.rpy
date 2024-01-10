@@ -175,9 +175,6 @@ init python:
                             if item.type == "grocery_list": ## checking the type of item to figure out what to do omg this is going to be a NIGHTMARE WITH A FULL GAME OF THESE
                                 addToInventory(["grocery_list"])
 
-                            elif item.type == "roses": ## checking the type of item to figure out what to do
-                                addToInventory(["roses"])
-
                             elif item.type == "mail": ## if you try to call a say screen in a python function, it'll return an error according to the tut?
                                 characterSay(who = "", what = ["...Maddie's having an affair with Jason Hughes and wants to confront him about it?", "She's so pissed she handwrote the letter, but I wonder if it's actually her handwriting."])
                                 #renpy.call("box_label")
@@ -452,6 +449,8 @@ screen inventory:
 
     add inventory_SM
 
+default dict_item_search = ""
+
 screen inventoryItemMenu(item):
     zorder 7
     frame:
@@ -459,32 +458,139 @@ screen inventoryItemMenu(item):
         background "#ffffff30"
         xpos item.x
         ypos item.y ## was feeling p lazy when it came to resizing at this point, feel free to remove all "at two_third_size" and the transform for "two_third_size" when constructing. you're smart and sexy, you'll make everything the right size
-        imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+
+        $ dict_item_search = item.type.replace("_", " ").title()
+
+        imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
         imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [Function(startDrag, item = item), Hide("inventoryItemMenu")]
         ## might wanna do this differently by making this a collapsible list of options or a couple of text buttons that say "View" and "Use" that are stacked on top of each other
 
-## item fill variables
-default evidence_button_text_mail = "???"
-default evidence_button_text_roses = "???"
-default evidence_button_text_grocery_list = "???"
-default evidence_button_text_black_fabric = "???"
-default evidence_button_text_champagne = "???"
-default evidence_button_text_body = "???"
-default evidence_button_text_head = "Who did it?"
-default evidence_button_text_broken_door = "???"
-default evidence_button_text_footprints = "???"
-default evidence_button_text_security_system = "???"
-default evidence_button_text_wedding_ring = "???"
-default evidence_button_text_purse = "???"
-default evidence_button_text_bite = "???"
+default inspect_dict = {
+    "current_item": "",
+    "action": "",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "",
+    "deduction": ""
+}
+
+default grocery_list_dict = {
+    "current_item": "Grocery List",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Found on the fridge in \nMaddie's house.",
+    "deduction": ""
+}
+
+default mail_dict = {
+    "current_item": "Mail",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Found on a table in \nMaddie's house.",
+    "deduction": ""
+}
+
+default black_fabric_dict = {
+    "current_item": "Black Fabric",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Caught on the fence in \nMaddie's backyard.",
+    "deduction": ""
+}
+
+default champagne_dict = {
+    "current_item": "Champagne",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Spilled on the floor in \nMaddie's house.",
+    "deduction": ""
+}
+
+default body_dict = {
+    "current_item": "Body",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "A vampire. Already dead \nby the time I got \nthere. No wedding ring.",
+    "deduction": ""
+}
+
+default head_dict = {
+    "current_item": "Head",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "A vampire. Already dead \nby the time I got \nthere. Pretty lady.",
+    "deduction": ""
+}
+
+default broken_door_dict = {
+    "current_item": "Broken Door",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Back door to Jason\'s. \nDoesn't really seem \nto work.",
+    "deduction": ""
+}
+
+default security_system_dict = {
+    "current_item": "Security System",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Jason\'s security system.\nLooks pretty old.",
+    "deduction": ""
+}
+
+default wedding_ring_dict = {
+    "current_item": "Wedding Ring",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Jason\'s wedding ring. \n",
+    "deduction": ""
+}
+
+default footprints_dict = {
+    "current_item": "Footprints",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Jason\'s, mine, and likely \nthe victim's. Still mad \nI ruined these.",
+    "deduction": ""
+}
+
+default purse_dict = {
+    "current_item": "Purse",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Purse with nothing in \nit. Found by the \nvictim's body.",
+    "deduction": ""
+}
+
+default bite_dict = {
+    "current_item": "Bite",
+    "action": "???",
+    "culprit_image": "",
+    "culprit_name": "???",
+    "desc": "Jason was bitten. Looks \nlike he gets bitten \na lot.",
+    "deduction": ""
+}
+
+default dict_list = []
 
 default current_item = ""
 
-default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"] ##this is obviously placeholders
+default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"]
 default evidence_options_list_b = ["Deja", "Taffy", "Maddie"] ## update this list when discovering new people
-default dropdown_state = "V"
 default dropdown_visible = False
-default option_num = 0
+
+default chosen_culprit_image = "default_image.png"
 
 #transform slide:
 #    yoffset -50
@@ -506,7 +612,8 @@ default option_num = 0
 screen dropdown_menu():
     modal True
     zorder 5
-    $ current_item = current_item.replace(" ", "_").lower()
+    $ current_item = inspect_dict.get("current_item") ## get the item that's currently being inspected
+    $ current_item = current_item.replace(" ", "_").lower() ## change the format to be code compliant
 
     button:
         # everything outside the frame is a transparent button to hide the screen
@@ -526,12 +633,19 @@ screen dropdown_menu():
                 spacing 2
 
                 for option in evidence_options_list_a:
-                    $ option_num = evidence_options_list_a.index(option)
                     textbutton option:
                         xpos 20
-                        action [SetVariable("evidence_button_text_{}".format(current_item), option), Hide("dropdown_menu")]
+                        action [SetDict(inspect_dict, "action", option), ##set the inspect dictionary's action to the option
+                        SetVariable("{}_dict".format(current_item), inspect_dict), ##copy the inspect dictionary back onto the original item's dictionary
+                        Hide("dropdown_menu")] ##hide the dropdown
 
         vbar value YScrollValue("vp")
+
+screen redHerring(item):
+    modal True
+    zorder 6
+
+    #frame:
 
 screen inspectItem(items):
     modal True
@@ -539,7 +653,7 @@ screen inspectItem(items):
     button:
         xfill True
         yfill True
-        action [If(len(items) > 1, true=RemoveFromSet(items, items[0]), false=[Hide("inspectItem"), If(len(dnd_dialogue) > 0, true=Show("characterSay"), false=NullAction())]), Hide("dropdown_menu"), SetVariable("dropdown_state", "V")]
+        action [If(len(items) > 1, true=RemoveFromSet(items, items[0]), false=[Hide("inspectItem"), If(len(dnd_dialogue) > 0, true=Show("characterSay"), false=NullAction())]), Hide("dropdown_menu")]
         image "dnd_test_files/Items Pop Up/items-pop-up-bg.png" align (0.5, 0.5)
         if "mail" in inventory_items:
             $ mail_state = inventory_sprites[inventory_items.index("mail")].state
@@ -548,7 +662,7 @@ screen inspectItem(items):
             item_name = ""
             item_desc = ""
             #item_state = ""
-            for name in inventory_item_names:
+            for name in inventory_item_names: ## gets the name of the item from the inventory_item_names list
                 temp_name = name.replace(" ", "_")
                 if temp_name.lower() == items[0]:
                     item_name = name
@@ -565,81 +679,14 @@ screen inspectItem(items):
         else:
             image "test_case/evidence popup/{}_popup.png".format(items[0]) at half_size align (0.4, 0.5)
 
-        text "{}".format(item_name) size 30 align (0.5, 0.28) color "#000000"
-        text "{}".format(item_desc) size 25 align (0.6, 0.4) ## show the description to the right of the image below
+        text "{}".format(inspect_dict["current_item"]) size 30 align (0.5, 0.28) color "#000000"
+        text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) ## show the description to the right of the image below
 
-        if item_name == "Mail":
-            button:
-                align (0.6, 0.56)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text "▼ " + evidence_button_text_mail
-        elif item_name == "Grocery List":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_grocery_list + " ▼"
-        elif item_name == "Black Fabric":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_black_fabric + " ▼"
-        elif item_name == "Champagne":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_champagne + " ▼"
-        elif item_name == "Body":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_body + " ▼"
-        elif item_name == "Head":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_head + " ▼"
-        elif item_name == "Broken Door":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_broken_door + " ▼"
-        elif item_name == "Footprints":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_footprints + " ▼"
-        elif item_name == "Security System":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_security_system + " ▼"
-        elif item_name == "Wedding Ring":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_wedding_ring + " ▼"
-        elif item_name == "Purse":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_purse + " ▼"
-        elif item_name == "Bite":
-            button:
-                align (0.5, 0.7)
-                action [SetVariable("current_item", item_name), Show("dropdown_menu")]
-                frame:
-                    text evidence_button_text_bite + " ▼"
+        button:
+            align (0.6, 0.56)
+            action [SetVariable("current_item", item_name), Show("dropdown_menu")]
+            frame:
+                text "▼ " + inspect_dict["action"]
 
 screen characterSay(who = None, what = None): ## default values
     modal True ## prevent interactions from happening underneath dialogue as it's showing
@@ -753,7 +800,7 @@ transform half_size:
 # point and click setup
 label setup_scene_maddies_house:
 
-    $ environment_items = ["roses", "mail", "grocery_list", "champagne"]
+    $ environment_items = ["mail", "grocery_list", "champagne"]
     $ current_scene = "maddies_house_scene"
 
     python:
@@ -778,13 +825,7 @@ label setup_scene_maddies_house:
                 environment_sprites[-1].idle_image = idle_image
                 environment_sprites[-1].hover_image = hover_image
 
-                if item == "roses": ## list of properties for each object
-                    environment_sprites[-1].width = 148 # make sure each image has its actual width and height
-                    environment_sprites[-1].height = 167
-                    environment_sprites[-1].x = 795 # positioning of each object in the scene
-                    environment_sprites[-1].y = 400
-
-                elif item == "grocery_list":
+                if item == "grocery_list":
                     environment_sprites[-1].width = 71
                     environment_sprites[-1].height = 76
                     environment_sprites[-1].x = 1710
@@ -963,403 +1004,6 @@ label setup_scene_jasons_corpse:
     scene jasons_corpse
 
     call screen jasons_corpse_scene
-
-label evidence_fill_1:
-    menu:
-        "Was taken from by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was taken from by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was taken from by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was taken from by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was taken from by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was taken from by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was taken from by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was taken from by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was taken from by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was taken from by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was taken from by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was taken from by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was taken from by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was taken from by "
-
-            jump evidence_fill_person
-
-        "Was written by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was written by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was written by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was written by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was written by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was written by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was written by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was written by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was written by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was written by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was written by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was written by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was written by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was written by "
-
-            jump evidence_fill_person
-
-        "Was worn by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was worn by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was worn by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was worn by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was worn by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was worn by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was worn by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was worn by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was worn by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was worn by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was worn by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was worn by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was worn by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was worn by "
-
-            jump evidence_fill_person
-
-        "Was planted by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was planted by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was planted by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was planted by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was planted by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was planted by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was planted by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was planted by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was planted by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was planted by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was planted by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was planted by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was planted by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was planted by "
-
-            jump evidence_fill_person
-
-        "Was left by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was left by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was left by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was left by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was left by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was left by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was left by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was left by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was left by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was left by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was left by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was left by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was left by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was left by "
-
-            jump evidence_fill_person
-
-        "Belongs to":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Belongs to "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Belongs to "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Belongs to "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Belongs to "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Belongs to "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Belongs to "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Belongs to "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Belongs to "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Belongs to "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Belongs to "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Belongs to "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Belongs to "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Belongs to "
-
-            jump evidence_fill_person
-
-        "Was hidden by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was hidden by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was hidden by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was hidden by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was hidden by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was hidden by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was hidden by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was hidden by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was hidden by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was hidden by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was hidden by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was hidden by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was hidden by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was hidden by "
-
-            jump evidence_fill_person
-
-        "Was broken by":
-            if current_item == "Roses":
-                $ evidence_button_text_roses = "Was broken by "
-            elif current_item == "Mail":
-                $ evidence_button_text_mail = "Was broken by "
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list = "Was broken by "
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric = "Was broken by "
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne = "Was broken by "
-            elif current_item == "Body":
-                $ evidence_button_text_body = "Was broken by "
-            elif current_item == "Head":
-                $ evidence_button_text_head = "Was broken by "
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door = "Was broken by "
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints = "Was broken by "
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system = "Was broken by "
-            elif current_item == "Purse":
-                $ evidence_button_text_purse = "Was broken by "
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring = "Was broken by "
-            elif current_item == "Bite":
-                $ evidence_button_text_bite = "Was broken by "
-
-            jump evidence_fill_person
-
-            ## used by??
-            ## remove "written" and "worn"
-
-label evidence_fill_person:
-    menu:
-        "Deja":
-            if current_item == "Roses":
-                $ evidence_button_text_roses += "Deja"
-            elif current_item == "Mail":
-                $ evidence_button_text_mail += "Deja"
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list += "Deja"
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric += "Deja"
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne += "Deja"
-            elif current_item == "Body":
-                $ evidence_button_text_body += "Deja"
-            elif current_item == "Head":
-                $ evidence_button_text_head += "Deja"
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door += "Deja"
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints += "Deja"
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system += "Deja"
-            elif current_item == "Purse":
-                $ evidence_button_text_purse += "Deja"
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring += "Deja"
-            elif current_item == "Bite":
-                $ evidence_button_text_bite += "Deja"
-
-            jump conclusion_grading
-
-        "Maddie":
-            if current_item == "Roses":
-                $ evidence_button_text_roses += "Maddie"
-            elif current_item == "Mail":
-                $ evidence_button_text_mail += "Maddie"
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list += "Maddie"
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric += "Maddie"
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne += "Maddie"
-            elif current_item == "Body":
-                $ evidence_button_text_body += "Maddie"
-            elif current_item == "Head":
-                $ evidence_button_text_head += "Maddie"
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door += "Maddie"
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints += "Maddie"
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system += "Maddie"
-            elif current_item == "Purse":
-                $ evidence_button_text_purse += "Maddie"
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring += "Maddie"
-            elif current_item == "Bite":
-                $ evidence_button_text_bite += "Maddie"
-
-            jump conclusion_grading
-
-        "Taffy":
-            if current_item == "Roses":
-                $ evidence_button_text_roses += "Taffy"
-            elif current_item == "Mail":
-                $ evidence_button_text_mail += "Taffy"
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list += "Taffy"
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric += "Taffy"
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne += "Taffy"
-            elif current_item == "Body":
-                $ evidence_button_text_body += "Taffy"
-            elif current_item == "Head":
-                $ evidence_button_text_head += "Taffy"
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door += "Taffy"
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints += "Taffy"
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system += "Taffy"
-            elif current_item == "Purse":
-                $ evidence_button_text_purse += "Taffy"
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring += "Taffy"
-            elif current_item == "Bite":
-                $ evidence_button_text_bite += "Taffy"
-
-            jump conclusion_grading
-
-        "Samantha" if know_samantha == True:
-            if current_item == "Roses":
-                $ evidence_button_text_roses += "Samantha"
-            elif current_item == "Mail":
-                $ evidence_button_text_mail += "Samantha"
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list += "Samantha"
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric += "Samantha"
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne += "Samantha"
-            elif current_item == "Body":
-                $ evidence_button_text_body += "Samantha"
-            elif current_item == "Head":
-                $ evidence_button_text_head += "Samantha"
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door += "Samantha"
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints += "Samantha"
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system += "Samantha"
-            elif current_item == "Purse":
-                $ evidence_button_text_purse += "Samantha"
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring += "Samantha"
-            elif current_item == "Bite":
-                $ evidence_button_text_bite += "Samantha"
-
-            jump conclusion_grading
-
-        "Jason":
-            if current_item == "Roses":
-                $ evidence_button_text_roses += "Jason"
-            elif current_item == "Mail":
-                $ evidence_button_text_mail += "Jason"
-            elif current_item == "Grocery List":
-                $ evidence_button_text_grocery_list += "Jason"
-            elif current_item == "Black Fabric":
-                $ evidence_button_text_black_fabric += "Jason"
-            elif current_item == "Champagne":
-                $ evidence_button_text_champagne += "Jason"
-            elif current_item == "Body":
-                $ evidence_button_text_body += "Jason"
-            elif current_item == "Head":
-                $ evidence_button_text_head += "Jason"
-            elif current_item == "Broken Door":
-                $ evidence_button_text_broken_door += "Jason"
-            elif current_item == "Footprints":
-                $ evidence_button_text_footprints += "Jason"
-            elif current_item == "Security System":
-                $ evidence_button_text_security_system += "Jason"
-            elif current_item == "Purse":
-                $ evidence_button_text_purse += "Jason"
-            elif current_item == "Wedding Ring":
-                $ evidence_button_text_wedding_ring += "Jason"
-            elif current_item == "Bite":
-                $ evidence_button_text_bite += "Jason"
-
-            jump conclusion_grading
 
 label conclusion_grading:
     if (evidence_button_text_mail == "Was written by Taffy" or evidence_button_text_mail == "Was planted by Taffy") and evidence_button_text_purse == "Was taken from by Taffy" and evidence_button_text_bite == "Was left by Samantha" and evidence_button_text_head == "Was left by Taffy": ## and conclusions list has taffy

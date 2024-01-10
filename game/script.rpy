@@ -49,21 +49,9 @@ label start:
     $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
 
     #$ environment_items = ["box", "door-vines", "key", "lantern"] # make sure these match up with the file names in the folder
-    $ inventory_item_names = ["Roses", "Mail", "Grocery List", "Black Fabric", "Champagne", "Body", "Head", "Broken Door", "Security System", "Wedding Ring", "Footprints", "Purse", "Bite"]
-    $ environment_items = ["roses", "mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite"]
-    $ inventory_item_desc = ["Found on the table in \nMaddie's house.",
-    "Found on a table in \nMaddie's house.",
-    "Found on the fridge in \nMaddie's house.",
-    "Caught on the fence in \nMaddie's backyard.",
-    "Spilled on the floor in \nMaddie's house.",
-    "A vampire. Already dead \nby the time I got \nthere. No wedding ring.",
-    "A vampire. Already dead \nby the time I got \nthere. Pretty lady.",
-    "Back door to Jason\'s. \nDoesn't really seem \nto work.",
-    "Jason\'s security system.\nLooks pretty old.",
-    "Jason\'s wedding ring. \n",
-    "Jason\'s, mine, and likely \nthe victim's. Still mad \nI ruined these.",
-    "Purse with nothing in \nit. Found by the \nvictim's body.",
-    "Jason was bitten. Looks \nlike he gets bitten \na lot."]
+    $ inventory_item_names = ["Mail", "Grocery List", "Black Fabric", "Champagne", "Body", "Head", "Broken Door", "Security System", "Wedding Ring", "Footprints", "Purse", "Bite"]
+    $ environment_items = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite"]
+    $ dict_list = [mail_dict, grocery_list_dict, black_fabric_dict, champagne_dict, body_dict, head_dict, broken_door_dict, security_system_dict, wedding_ring_dict, footprints_dict, purse_dict, bite_dict]
 
     #show screen triangle
 
