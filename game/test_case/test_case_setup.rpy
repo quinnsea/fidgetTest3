@@ -29,20 +29,27 @@ screen inventoryItemMenu(item):
         xysize (inventory_slot_size[0], inventory_slot_size[1])
         background "#ffffff30"
         xpos item.x
-        ypos item.y ## was feeling p lazy when it came to resizing at this point, feel free to remove all "at two_third_size" and the transform for "two_third_size" when constructing. you're smart and sexy, you'll make everything the right size
+        ypos item.y
 
         $ dict_item_search = item.type.replace(" ", "_")
+
+        imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
+        imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [SetVariable("current_item", dict_list[inventory_item_names.index(dict_item_search)]), Function(startDrag, item = item), Hide("inventoryItemMenu")]
+        ## might wanna do this differently by making this a collapsible list of options or a couple of text buttons that say "View" and "Use" that are stacked on top of each other
+        button:
+            align (0.5, 0.7)
+            background "#FFFFFF"
+            padding(25, 10)
+            action Show("redHerring", inv_item = dict_list[inventory_item_names.index(dict_item_search)])
+            text "Red Herring" color "#000000" size 8
 
         python:
             print(dict_item_search)
 
-        imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-        imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [Function(startDrag, item = item), Hide("inventoryItemMenu")]
-        ## might wanna do this differently by making this a collapsible list of options or a couple of text buttons that say "View" and "Use" that are stacked on top of each other
-
 default inspect_dict = {
     "current_item": "",
     "action": "",
+    "item_image": "",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "",
@@ -51,7 +58,12 @@ default inspect_dict = {
     "new_state": "",
     "found_dialogue": [],
     "combine_dialogue": [],
-    "deduction": ""
+    "deduction": "",
+    "herring_action": "",
+    "herring_culprit": "",
+    "deja_statement": "",
+    "maddie_statement": "",
+    "taffy_statement": ""
 }
 
 default dict_list = []
@@ -61,6 +73,7 @@ default current_item = ""
 default suspect_bio = {
     "current_item": "",
     "action": "",
+    "item_image": "",
     "culprit_image": "",
     "culprit_name": "",
     "desc": "",
@@ -69,7 +82,12 @@ default suspect_bio = {
     "new_state": "",
     "found_dialogue": [],
     "combine_dialogue": [],
-    "deduction": ""
+    "deduction": "",
+    "herring_action": "",
+    "herring_culprit": "",
+    "deja_statement": "",
+    "maddie_statement": "",
+    "taffy_statement": ""
 }
 
 default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"]
@@ -79,6 +97,7 @@ default dropdown_visible = False
 
 default chosen_culprit_image = "gui/profiles/default_icon.png"
 default is_inspecting = ""
+default is_investigating = False
 
 screen suspect_list():
     modal True
@@ -103,15 +122,15 @@ screen suspect_list():
             for suspect in evidence_options_list_b:
 
                 if evidence_options_list_b.index(suspect) <= 2: ## needs a way to accommodate for multiple lines of suspects/people of interest, should probably compare to a list of possible suspects and fill with default profiles
-
+                ## likely won't need any more than 2 lines of suspects
                     button:
                         image "gui/profiles/{}_icon.png".format(suspect)
                         ypos 50
-                        action If((is_inspecting != None), true=[SetDict(inspect_dict, "culprit_name", suspect),
+                        action If((is_inspecting != None), true=[SetDict(inspect_dict, "culprit_name", suspect), ## if we're inspecting, clicking on the character's icon will save them as the suspect for the inspected item
                         SetDict(inspect_dict, "culprit_image", "gui/profiles/{}_icon.png".format(suspect)),
                         SetDict(inspect_dict, "deduction", inspect_dict["action"] + " " + inspect_dict["culprit_name"]),
                         SetVariable("{}_dict".format(current_item), inspect_dict),
-                        Hide("suspect_list")], false=Show("suspect_info", suspect = suspect))
+                        Hide("suspect_list")], false=Show("suspect_info", suspect = suspect)) ## if we're not inspecting, clicking on the character's icon will show their bio
 
         hbox:
             spacing 125
@@ -192,11 +211,94 @@ screen dropdown_menu():
 
         vbar value YScrollValue("vp")
 
-screen redHerring(item):
+default rh_actions = ["Was broken by", "Was tampered with by", "Was planted by", "Contradicts", "Doesn't explain", "Doesn't matter"]
+
+screen suspect_dropdown(item):
+    modal True
+    zorder 7
+
+    button:
+        # everything outside the frame is a transparent button to hide the screen
+        background None
+        action [Hide("redHerring"), Hide("suspect_dropdown")]
+
+    frame:
+        align (0.8, 0.5)
+        ysize 200
+        xsize 350
+
+        viewport id "vp":
+            mousewheel True
+            draggable True
+
+            vbox:
+                spacing 2
+
+                for suspect in evidence_options_list_b:
+                    textbutton suspect:
+                        xpos 20
+                        action [SetDict(inspect_dict, "herring_suspect", suspect), ##set the inspect dictionary's action to the option
+                        SetVariable("{}_dict".format(current_item), inspect_dict), ##copy the inspect dictionary back onto the original item's dictionary
+                        Hide("suspect_dropdown")] ##hide the dropdown
+
+        vbar value YScrollValue("vp")
+
+screen redHerring(inv_item):
+    $ is_choosing_herring = True
+    $ inspect_dict = inv_item
+
     modal True
     zorder 6
 
-    #frame:
+    button:
+        # everything outside the frame is a transparent button to hide the screen
+        background None
+        action Hide("redHerring")
+
+    frame:
+        ysize 600
+        xsize 950
+        align (0.5, 0.5)
+
+        text "Why is this a red herring?" color "#FFFFFF" size 40 align (0.5, 0.1)
+
+        python:
+            print(inv_item)
+
+        vbox:
+            xpos 50
+            yalign 0.5
+            image "test_case/evidence popup/{}_popup.png".format(inspect_dict["current_item"].replace(" ", "_").lower()) at half_size align (0.15, 0.5) ## show the active item on the left
+            text "{}".format(inspect_dict["current_item"]) color "#FFFFFF" size 20 align (0.1, 0.7)
+
+        vbox:
+            spacing 20
+            align (0.5, 0.5)
+
+            for rh in rh_actions: ## show a list of buttons for different actions, whatever is chosen is saved as that item's herring_action
+                textbutton rh:
+                    action [SetDict(inspect_dict, "herring_action", rh)]
+
+        vbox:
+            spacing 20
+            align (0.8, 0.5)
+
+            if inspect_dict["herring_action"] != None: ## whenever the herring_action has been chosen
+
+                if rh_actions.index(herring_action) <= 2: ## if the action is anywhere between indices 0-2, let the player choose from the suspect list in a dropdown
+                    imagebutton chosen_culprit_image:
+                        action Show("suspect_dropdown", item = inv_item)
+
+            ## if the action is indices 3 or 4, open up and let the player choose a statement related to the item
+            ## if the action is the last action on the list, don't pick anything
+            ## after going through this, save the item's herring_culprit which will be either a statement or a suspect from the list
+
+            ##imagebutton:
+            ##    chosen_culprit_image
+
+
+#screen save_statement(who, what):
+    ## i'd rather put the button on the say screen here if i can
 
 screen inspectItem(items):
     modal True

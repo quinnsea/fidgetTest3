@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/test_case/test_case_setup.rpy", line 1061, in script
+  File "game/test_case/test_case_setup.rpy", line 483, in script
     call screen maddies_house_scene
   File "renpy/common/000statements.rpy", line 670, in execute_call_screen
     store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 465, in execute
+  File "game/test_case/test_case_setup.rpy", line 26, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 465, in execute
+  File "game/test_case/test_case_setup.rpy", line 26, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 467, in execute
+  File "game/test_case/test_case_setup.rpy", line 28, in execute
     frame:
-  File "game/test_case/test_case_setup.rpy", line 478, in execute
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-  File "game/test_case/test_case_setup.rpy", line 478, in keywords
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-  File "game/test_case/test_case_setup.rpy", line 478, in <module>
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-ValueError: 'grocery_list' is not in list
+  File "game/test_case/test_case_setup.rpy", line 46, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 47, in <module>
+    print(inv_item)
+NameError: name 'inv_item' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 1061, in script
+  File "game/test_case/test_case_setup.rpy", line 483, in script
     call screen maddies_house_scene
   File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
     self.call("execute")
@@ -54,21 +52,19 @@ Full traceback:
     self.update()
   File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
     self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 465, in execute
+  File "game/test_case/test_case_setup.rpy", line 26, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 465, in execute
+  File "game/test_case/test_case_setup.rpy", line 26, in execute
     screen inventoryItemMenu(item):
-  File "game/test_case/test_case_setup.rpy", line 467, in execute
+  File "game/test_case/test_case_setup.rpy", line 28, in execute
     frame:
-  File "game/test_case/test_case_setup.rpy", line 478, in execute
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-  File "game/test_case/test_case_setup.rpy", line 478, in keywords
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-  File "game/test_case/test_case_setup.rpy", line 478, in <module>
-    imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-ValueError: 'grocery_list' is not in list
+  File "game/test_case/test_case_setup.rpy", line 46, in execute
+    python:
+  File "game/test_case/test_case_setup.rpy", line 47, in <module>
+    print(inv_item)
+NameError: name 'inv_item' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
 detective test 1.2
-Tue Jan  9 21:49:57 2024
+Sun Jan 14 00:48:24 2024

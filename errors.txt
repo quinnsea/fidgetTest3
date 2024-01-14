@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/test_case/test_case_setup.rpy", line 195: is not terminated with a newline. (Check strings and parenthesis.)
-                                                characterSay(who = "", what = dict["found_dialogue"]
+File "game/test_case/test_case_setup.rpy", line 218: 'inspect_dict' is not a keyword argument or valid child of the for statement.
+    inspect_dict = dict["current_item"]
+                ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Tue Jan  9 22:12:39 2024
+Sun Jan 14 00:36:10 2024

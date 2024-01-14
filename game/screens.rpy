@@ -116,6 +116,17 @@ screen say(who, what):
     $ current_speaker = who
     $ current_dialogue = what
 
+    if is_inspecting == True:
+
+        button:
+            
+            background "#FFFFFF"
+            padding(25, 10)
+            align(0.3, 0.3)
+            action [SetDict(inspect_dict, "{}_statement".format(who.lower()), what), ## save the suspect's statement with the current_item under their name
+            SetVariable("{}_dict".format(current_item.replace(" ", "_").lower()), inspect_dict)] ## save the dictionary back to what it belongs to
+            text "Save Statement" color "#000000" size 18
+
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):

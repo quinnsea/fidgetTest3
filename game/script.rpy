@@ -48,6 +48,8 @@ label start:
     $ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
     $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
 
+    $ is_investigating = True
+
     #$ environment_items = ["box", "door-vines", "key", "lantern"] # make sure these match up with the file names in the folder
     $ inventory_item_names = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]
     $ environment_items = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]

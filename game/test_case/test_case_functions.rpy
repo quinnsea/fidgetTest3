@@ -108,6 +108,16 @@ init python:
 
                                         ie_overlap = True
 
+                                        for dict in dict_list:
+
+                                            if dict["current_item"].replace(" ", "_").lower() == item1.type:
+                                                temp_dict1 = dict
+
+                                            elif dict["current_item"].replace(" ", "_").lower() == item2.type:
+                                                temp_dict3 = dict
+
+                                        ## if item1.type
+
                                         if item1.type == "key" and item3.type == "box":
 
                                             ie_combine = True
