@@ -34,7 +34,7 @@ screen inventoryItemMenu(item):
         $ dict_item_search = item.type.replace(" ", "_")
 
         imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
-        imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [SetVariable("current_item", dict_list[inventory_item_names.index(dict_item_search)]), Function(startDrag, item = item), Hide("inventoryItemMenu")]
+        imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Function(startDrag, item = item), Hide("inventoryItemMenu")]
         ## might wanna do this differently by making this a collapsible list of options or a couple of text buttons that say "View" and "Use" that are stacked on top of each other
         button:
             align (0.5, 0.7)
@@ -297,8 +297,7 @@ screen redHerring(inv_item):
             ##    chosen_culprit_image
 
 
-#screen save_statement(who, what):
-    ## i'd rather put the button on the say screen here if i can
+##screen save_statement(who, what):
 
 screen inspectItem(items):
     modal True
