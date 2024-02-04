@@ -1,27 +1,29 @@
 default grocery_list_dict = {
-    "current_item": "Grocery List",
-    "action": "???",
-    "item_image": "",
-    "culprit_image": "",
-    "culprit_name": "???",
-    "desc": "Found on the fridge in Maddie's house.",
-    "item_search": "mail",
-    "item_search_remove": "grocery_list",
-    "new_state": "",
-    "found_dialogue": [],
-    "combine_dialogue": [],
-    "deduction": "",
-    "herring_action": "",
-    "herring_culprit": "",
-    "deja_statement": "",
-    "maddie_statement": "",
-    "taffy_statement": ""
+    "current_item": "Grocery List", ## what's the name
+    "action": "???", ## what did someone do to this
+    "item_image_inspect": "test_case/evidence popup/grocery_list_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_grocery_list.png",
+    "culprit_image": "", ## who did it (what do they look like)
+    "culprit_name": "???", ## who did it (what's their FUCKEN name)
+    "desc": "Found on the fridge in Maddie's house.", ## default description
+    "item_search": "mail", ## what item can they wanna combine with
+    "item_search_remove": "grocery_list", ## if they combine, which item is getting axed
+    "new_state": "", ## after being combined, what does the non-removed item become
+    "found_dialogue": [], ## when found, what does levi say
+    "combine_dialogue": [], ## when combined, what does levi say
+    "deduction": "", ## what's the current deduction for the item
+    "herring_action": "", ## what did someone do to this evidence to make it a red herring
+    "herring_culprit": "", ## who did the red herring
+    "deja_statement": "", ## what does deja have to say about this item
+    "maddie_statement": "", ## what does maddie have to say about this item
+    "taffy_statement": "" ## what does taffy have to say about this item
 }
 
 default mail_dict = {
     "current_item": "Mail",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/mail_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_mail.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Found on a table in Maddie's house.",
@@ -29,7 +31,7 @@ default mail_dict = {
     "item_search_remove": "grocery_list",
     "new_state": "checked",
     "found_dialogue": ["...Maddie's having an affair with Jason Hughes and wants to confront him about it?", "She's so pissed she handwrote the letter, but I wonder if it's actually her handwriting."],
-    "combine_dialogue": [],
+    "combine_dialogue": ["Yeah, this is definitely Maddie's handwriting"],
     "deduction": "",
     "herring_action": "",
     "herring_culprit": "",
@@ -41,7 +43,8 @@ default mail_dict = {
 default black_fabric_dict = {
     "current_item": "Black Fabric",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/black_fabric_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_black_fabric.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Caught on the fence in Maddie's backyard.",
@@ -61,7 +64,8 @@ default black_fabric_dict = {
 default champagne_dict = {
     "current_item": "Champagne",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/champagne_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_champagne.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Spilled on the floor in Maddie's house.",
@@ -80,8 +84,9 @@ default champagne_dict = {
 
 default body_dict = {
     "current_item": "Body",
-    "action": "???",
-    "item_image": "",
+    "action": "Why kill this girl?",
+    "item_image_inspect": "test_case/evidence popup/body_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_body.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "A vampire. Already dead by the time I got there. No wedding ring.",
@@ -100,8 +105,9 @@ default body_dict = {
 
 default head_dict = {
     "current_item": "Head",
-    "action": "???",
-    "item_image": "",
+    "action": "Who killed her?",
+    "item_image_inspect": "test_case/evidence popup/head_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_head.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "A vampire. Already dead by the time I got there. Pretty lady.",
@@ -121,7 +127,8 @@ default head_dict = {
 default broken_door_dict = {
     "current_item": "Broken Door",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/broken_door_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_broken_door.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Back door to Jason\'s. Doesn't really seem to work.",
@@ -141,7 +148,8 @@ default broken_door_dict = {
 default security_system_dict = {
     "current_item": "Security System",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/security_system_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_security_system.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Jason\'s security system. Looks pretty old.",
@@ -161,7 +169,8 @@ default security_system_dict = {
 default wedding_ring_dict = {
     "current_item": "Wedding Ring",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/wedding_ring_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_wedding_ring.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Jason\'s wedding ring.",
@@ -181,7 +190,8 @@ default wedding_ring_dict = {
 default footprints_dict = {
     "current_item": "Footprints",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/footprints_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_footprints.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Jason\'s, mine, and likely the victim's. Still mad I ruined these.",
@@ -201,7 +211,8 @@ default footprints_dict = {
 default purse_dict = {
     "current_item": "Purse",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/purse_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_purse.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Purse with nothing in it. Found by the victim's body.",
@@ -221,7 +232,8 @@ default purse_dict = {
 default bite_dict = {
     "current_item": "Bite",
     "action": "???",
-    "item_image": "",
+    "item_image_inspect": "test_case/evidence popup/bite_popup.png",
+    "item_image_inventory": "test_case/evidence inventory/inventory_bite.png",
     "culprit_image": "",
     "culprit_name": "???",
     "desc": "Jason was bitten. Looks like he gets bitten \na lot.",

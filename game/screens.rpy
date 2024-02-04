@@ -99,15 +99,16 @@ style frame:
 #default current_dialogue = ""
 
 screen say(who, what):
-    if is_inspecting == True:
+    if is_investigating == True and who != None and current_item != None:
+
         button:
             background "#FFFFFF"
             padding(25, 10)
-            align(0.3, 0.3)
+            align(0.9, 0.72)
             action [SetDict(inspect_dict, "{}_statement".format(who.lower()), what), ## save the suspect's statement with the current_item under their name
             SetVariable("{}_dict".format(current_item.replace(" ", "_").lower()), inspect_dict)] ## save the dictionary back to what it belongs to
             text "Save Statement" color "#000000" size 18
-            
+
     style_prefix "say"
 
     window:
@@ -121,9 +122,6 @@ screen say(who, what):
                 text who id "who"
 
         text what id "what"
-
-    $ current_speaker = who
-    $ current_dialogue = what
 
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
@@ -261,6 +259,9 @@ default pass_label = ""
 
 # How much dialogue have we said during the choice menu so far?
 default wait_dialogue = 0
+
+#do we want the choices to fade in
+default choice_fade = True
 
 screen choice(items):
     style_prefix "choice"
@@ -1419,7 +1420,6 @@ style skip_triangle:
     ## We have to use a font that has the BLACK RIGHT-POINTING SMALL TRIANGLE
     ## glyph in it.
     font "DejaVuSans.ttf"
-
 
 ## Notify screen ###############################################################
 ##

@@ -10,7 +10,7 @@ label maddie_intro:
         "Why is she smiling? Why isn't she wearing all black?"
         menu:
             "What's with the green?":
-                $ inventory_item_desc[4] += " Got Maddie's \nblack dress dirty."
+                $ champagne_dict["desc"] += " Got Maddie's black dress dirty."
                 m "Oh, y'know."
                 m "Deja popped the champagne and almost took my eye out."
                 l "You alright?"

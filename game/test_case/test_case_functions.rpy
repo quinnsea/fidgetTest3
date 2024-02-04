@@ -16,6 +16,7 @@ init python:
         return None # if we stop dragging, we have to make sure we don't return to this function anymore
 
     def inventoryEvents(event, x, y, at): # event = event currently occuring, x & y = mouse pos, at = time since sprite manager was shown
+
         global mousepos, dnd_dialogue, inventory_drag, i_overlap, ie_overlap
 
         if event.type == renpy.pygame_sdl2.MOUSEBUTTONUP: ## check if the button got let go to stop dragging
@@ -37,58 +38,81 @@ init python:
                                 items_overlap = checkItemsOverlap(item1, item2)
 
                                 if items_overlap == True:
-
                                     i_overlap = True
+                                    print(item1.type + " " + item2.type)
 
-                                    ## for each dictionary in the dictionary list, do a for loop for that dictionary
-                                    ## if the current_item.replace(" ", "_").lower() == item1.type, save it under temp_dict1
-                                    ## repeat for temp_dict2
-                                    ## if temp_dict1["item_search"] == item2.type OR temp_dict2["item_search"] == item1.type do the thing
-                                    ## elif item1.type OR item2.type is in the culprit list
-                                    ## set current_item to item1.type / item2.type (might have to do an elif statement for each item being a part of the culprit list)
-                                    ## call the relevant dialogue script
+                                    for dict in dict_list: ## for each dictionary in the dictionary list, do a for loop for that dictionary
 
-                                    for dict in dict_list:
-
-                                        if dict["current_item"].replace(" ", "_").lower() == item1.type:
+                                        if dict["current_item"].replace(" ", "_").lower() == item1.type: ## if the current_item.replace(" ", "_").lower() == item1.type, save it under temp_dict1
                                             temp_dict1 = dict
 
-                                        elif dict["current_item"].replace(" ", "_").lower() == item2.type:
+                                        elif dict["current_item"].replace(" ", "_").lower() == item2.type: ## repeat for temp_dict2
                                             temp_dict2 = dict
 
                                     if (temp_dict1["item_search"] == temp_dict2["current_item"].replace(" ", "_").lower()) or (temp_dict2["item_search"] == temp_dict1["current_item"].replace(" ", "_").lower()):
 
-                                        i_combine == True
-                                        removeInventoryItem(temp_dict1["item_search_remove"])
-                                        ## change the item image to a preset item image that Will Be Added To The Dictionaries
-                                        ## honestly just reference the code below you can figure it out i believe in you because you're sexy and a genius and your ass is out of this world
-
-                                    if (item1.type == "grocery_list" or item1.type == "mail") and (item2.type == "grocery_list" or item2.type == "mail"): ## this is the only type of item that can be combined in this, rinse and repeat for all combineable items
-
                                         i_combine = True
 
-                                        if item1.type == "grocery_list":
+                                        if item1.type == temp_dict1["item_search_remove"]:
                                             removeInventoryItem(item1)
 
                                         else:
                                             removeInventoryItem(item2)
 
-                                        mail_image = Image("test_case/evidence inventory/inventory_mail_checked.png") ## "dnd_test_files/Inventory Items/inventory-lantern-lit.png"
-                                        t = Transform(child = mail_image) ## might need to add ", zoom = 0.7", but we'll see
+                                        if temp_dict1["new_state"] != "": ## change the item image to a preset item image that Will Be Added To The Dictionaries
+                                            temp_dict1["item_image_inventory"] = "test_case/evidence inventory/inventory_{}_{}.png".format(item1.type, temp_dict1["new_state"])
+                                            temp_dict1["item_image_inspect"] = "test_case/evidence popup/{}_{}_popup.png".format(item1.type, temp_dict1["new_state"])
 
-                                        inventory_sprites[inventory_items.index("mail")].set_child(t)
-                                        inventory_sprites[inventory_items.index("mail")].item_image = mail_image
-                                        inventory_sprites[inventory_items.index("mail")].state = "checked"
-                                        renpy.show_screen("inspectItem", ["mail"])
+                                            t = Transform(child = temp_dict1["item_image_inventory"])
+                                            inventory_sprites[inventory_items.index(temp_dict1["current_item"].replace(" ", "_").lower())].set_child(t)
+                                            inventory_sprites[inventory_items.index(temp_dict1["current_item"].replace(" ", "_").lower())].item_image = temp_dict1["item_image_inventory"]
+                                            inventory_sprites[inventory_items.index(temp_dict1["current_item"].replace(" ", "_").lower())].state = temp_dict1["new_state"]
+                                            renpy.show_screen("inspectItem", [temp_dict1["current_item"].replace(" ", "_").lower()])
 
-                                        characterSay(who = "Levi", what = ["...Yeah, the handwriting on these match up.", "It's definitely Maddie's."], inspectItem = True)
+                                            for dict in dict_list:
+                                                if dict["current_item"] == temp_dict1["current_item"]:
+                                                    dict_index = dict_list.index(dict)
+                                                    dict_list[dict_index] = temp_dict1
+                                                elif dict["current_item"] == temp_dict2["current_item"]:
+                                                    dict_index = dict_list.index(dict)
+                                                    dict_list[dict_index] = temp_dict2
+
+                                            if temp_dict1["combine_dialogue"] != []:
+                                                characterSay(who = "Levi", what = temp_dict1["combine_dialogue"], inspectItem = True)
+
+                                            elif temp_dict2["combine_dialogue"] != []:
+                                                characterSay(who = "Levi", what = temp_dict2["combine_dialogue"], inspectItem = True)
+
+                                        else:
+                                            temp_dict2["item_image_inventory"] = "test_case/evidence inventory/inventory_{}_{}.png".format(item2.type, temp_dict2["new_state"])
+                                            temp_dict2["item_image_inspect"] = "test_case/evidence popup/{}_{}_popup.png".format(item2.type, temp_dict2["new_state"])
+
+                                            t = Transform(child = temp_dict2["item_image"])
+                                            inventory_sprites[inventory_items.index(temp_dict2["current_item"].replace(" ", "_").lower())].set_child(t)
+                                            inventory_sprites[inventory_items.index(temp_dict2["current_item"].replace(" ", "_").lower())].item_image = temp_dict2["item_image"]
+                                            inventory_sprites[inventory_items.index(temp_dict2["current_item"].replace(" ", "_").lower())].state = temp_dict2["new_state"]
+                                            renpy.show_screen("inspectItem", [temp_dict2["current_item"].replace(" ", "_").lower()])
+
+                                            for dict in dict_list:
+                                                if dict["current_item"] == temp_dict1["current_item"]:
+                                                    dict_index = dict_list.index(dict)
+                                                    dict_list[dict_index] = temp_dict1
+                                                elif dict["current_item"] == temp_dict2["current_item"]:
+                                                    dict_index = dict_list.index(dict)
+                                                    dict_list[dict_index] = temp_dict2
+
+                                            if temp_dict1["combine_dialogue"] != []:
+                                                characterSay(who = "Levi", what = temp_dict1["combine_dialogue"], inspectItem = True)
+
+                                            elif temp_dict2["combine_dialogue"] != []:
+                                                characterSay(who = "Levi", what = temp_dict2["combine_dialogue"], inspectItem = True)
 
                                         inventory_SM.redraw(0) ## i think there's something wrong with this method
                                         renpy.restart_interaction()
 
                                         break
 
-                                    else: ## if you combine with the last object on the list
+                                    else: ## if you combine with an incompatible object
 
                                         item1.x = item1.original_x
                                         item1.y = item1.original_y
@@ -98,45 +122,47 @@ init python:
 
                                         break
 
-                            if i_combine == False: ## 2 inventory items were not combined
-
+                            if i_combine == False: ## if items in the inventory are not being combined, then it's combining with an item in the environment
+                                print("item is combining with an environment item")
                                 for item3 in environment_sprites:
-
                                     items_overlap = checkItemsOverlap(item1, item3)
 
                                     if items_overlap == True:
-
                                         ie_overlap = True
 
                                         for dict in dict_list:
-
                                             if dict["current_item"].replace(" ", "_").lower() == item1.type:
                                                 temp_dict1 = dict
-
-                                            elif dict["current_item"].replace(" ", "_").lower() == item2.type:
+                                            elif dict["current_item"].replace(" ", "_").lower() == item3.type:
                                                 temp_dict3 = dict
 
-                                        ## if item1.type
+                                        ## if item1 or item3.type is in the suspect list
+                                        ## start the relevant dialogue
 
-                                        if item1.type == "key" and item3.type == "box":
-
+                                        if temp_dict1["current_item"] in evidence_options_list_b:
+                                            print("item convo is being called")
                                             ie_combine = True
-                                            removeInventoryItem(item1)
-                                            removeEnvironmentItem(item3)
-                                            addToInventory(["secateur", "matches"])
-                                            renpy.show_screen("inspectItem", ["secateur", "matches"])
-                                            characterSay(who = "Levi", what = ["This tool might come in handy.", "But for what?"], inspectItem = True)
+                                            item1.x = item1.original_x
+                                            item1.y = item1.original_y
+                                            item1.zorder = 0
+                                            renpy.hide_screen("inventory")
+                                            renpy.hide_screen("dnd_ui")
+                                            renpy.call("{}_{}".format(temp_dict1["current_item"].lower(), temp_dict3["current_item"].replace(" ", "_").lower())) ## this only works for the first item picked up
+                                            ## after the first item picked up, all other items hide behind the culprit when attempting to show it to them
                                             inventory_SM.redraw(0)
                                             environment_SM.redraw(0)
                                             renpy.restart_interaction()
                                             break
 
-                                        elif item1.type == "secateur" and item3.type == "door-vines":
-
+                                        elif temp_dict3["current_item"] in evidence_options_list_b:
+                                            print("item convo is being called")
                                             ie_combine = True
-                                            removeInventoryItem(item1)
-                                            removeEnvironmentItem(item3)
-                                            characterSay(who = "Levi", what = ["Looks like that freed up the door."])
+                                            item1.x = item1.original_x
+                                            item1.y = item1.original_y
+                                            item1.zorder = 0
+                                            renpy.hide_screen("inventory")
+                                            renpy.hide_screen("dnd_ui")
+                                            renpy.call("{}_{}".format(temp_dict3["current_item"].lower(), temp_dict1["current_item"].replace(" ", "_").lower()))
                                             inventory_SM.redraw(0)
                                             environment_SM.redraw(0)
                                             renpy.restart_interaction()
@@ -156,7 +182,7 @@ init python:
                                 item1.y = item1.original_y
                                 item1.zorder = 0
 
-        if event.type == renpy.pygame_sdl2.MOUSEMOTION: ## if the event is a mouse movement
+        if event.type == renpy.pygame_sdl2.MOUSEMOTION: ## if the event is a mouse movement/hover
 
             mousepos = (x, y)
 
@@ -221,7 +247,9 @@ init python:
 
                                             break
 
-                            elif item.type in evidence_options_list_b:
+                            else:
+
+                                print("attempting to call intro")
 
                                 renpy.call("{}_intro".format(item.type))
 
@@ -336,6 +364,12 @@ init python:
                     removeEnvironmentItem(item = envitem)
                     break
 
+                elif envitem.type.lower() in evidence_options_list_b:
+
+                    print("calling intro")
+
+                    renpy.call("{}_intro".format(envitem.type.lower()))
+
             repositionInventoryItems()
 
             inventory_SM.redraw(0)
@@ -428,3 +462,6 @@ init python:
         dnd_dialogue = {}
         inventory_drag = False
         renpy.hide_screen("characterSay")
+
+    def checkHerring(dict_name):
+        print(dict_name["herring_action"] + " " + dict_name["herring_culprit"])

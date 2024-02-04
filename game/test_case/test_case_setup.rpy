@@ -33,18 +33,19 @@ screen inventoryItemMenu(item):
 
         $ dict_item_search = item.type.replace(" ", "_")
 
+        button:
+            background "#FFFFFF"
+            padding(25, 10)
+            align (0.5, 0.8)
+            action [Show("redHerring", inv_item = dict_list[inventory_item_names.index(dict_item_search)]), Hide("inventoryItemMenu")]
+            text "Red Herring" color "#000000" size 8
+
         imagebutton auto "dnd_test_files/UI/view-inventory-item-%s.png" at two_third_size align (0.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Show("inspectItem", items = [item.type]), Hide("inventoryItemMenu")]
         imagebutton auto "dnd_test_files/UI/use-inventory-item-%s.png" at two_third_size align (1.0, 0.5) action [SetVariable("inspect_dict", dict_list[inventory_item_names.index(dict_item_search)]), Function(startDrag, item = item), Hide("inventoryItemMenu")]
         ## might wanna do this differently by making this a collapsible list of options or a couple of text buttons that say "View" and "Use" that are stacked on top of each other
-        button:
-            align (0.5, 0.7)
-            background "#FFFFFF"
-            padding(25, 10)
-            action Show("redHerring", inv_item = dict_list[inventory_item_names.index(dict_item_search)])
-            text "Red Herring" color "#000000" size 8
 
-        python:
-            print(dict_item_search)
+        #python:
+            #print(dict_item_search)
 
 default inspect_dict = {
     "current_item": "",
@@ -90,7 +91,7 @@ default suspect_bio = {
     "taffy_statement": ""
 }
 
-default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"]
+default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"] ##"Was lost by", "Was thrown by"
 default evidence_options_list_b = ["Deja", "Taffy", "Maddie"] ## update this list when discovering new people
 default suspect_list_padding = 50
 default dropdown_visible = False
@@ -237,15 +238,27 @@ screen suspect_dropdown(item):
                 for suspect in evidence_options_list_b:
                     textbutton suspect:
                         xpos 20
-                        action [SetDict(inspect_dict, "herring_suspect", suspect), ##set the inspect dictionary's action to the option
+                        action [SetDict(inspect_dict, "herring_culprit", suspect), ##set the inspect dictionary's action to the option
                         SetVariable("{}_dict".format(current_item), inspect_dict), ##copy the inspect dictionary back onto the original item's dictionary
-                        Hide("suspect_dropdown")] ##hide the dropdown
+                        SetVariable("chosen_culprit_image", "gui/profiles/{}_icon.png".format(suspect).lower()), ##set the current culprit image to the suspect's
+                        Hide("suspect_dropdown"), ##hide the dropdown
+                        Hide("redHerring"), ##hide the red herring menu
+                        Show("redHerring", inv_item = item)] ##honestly basically refresh the red herring menu
 
         vbar value YScrollValue("vp")
 
 screen redHerring(inv_item):
     $ is_choosing_herring = True
     $ inspect_dict = inv_item
+
+    python:
+        global inspect_dict
+        if inspect_dict["herring_culprit"] != "":
+            print(inspect_dict["herring_culprit"])
+            print(chosen_culprit_image)
+
+    #python:
+    #    renpy.hide_screen("inventory")
 
     modal True
     zorder 6
@@ -260,10 +273,10 @@ screen redHerring(inv_item):
         xsize 950
         align (0.5, 0.5)
 
-        text "Why is this a red herring?" color "#FFFFFF" size 40 align (0.5, 0.1)
+        text "Why is this a red herring?" color "#FFFFFF" size 40 align (0.5, 0.05)
 
-        python:
-            print(inv_item)
+        #python:
+        #    print(inv_item)
 
         vbox:
             xpos 50
@@ -276,30 +289,70 @@ screen redHerring(inv_item):
             align (0.5, 0.5)
 
             for rh in rh_actions: ## show a list of buttons for different actions, whatever is chosen is saved as that item's herring_action
-                textbutton rh:
-                    action [SetDict(inspect_dict, "herring_action", rh)]
+                if rh_actions.index(rh) > 4:
+                    textbutton rh:
+                        xalign 0.5
+                        action [SetDict(inspect_dict, "herring_action", rh), SetDict(inspect_dict, "herring_culprit", "."), Hide("redHerring"), Show("redHerring", inv_item = inspect_dict)]
 
-        vbox:
-            spacing 20
-            align (0.8, 0.5)
+                else:
+                    textbutton rh:
+                        xalign 0.5
+                        action [SetDict(inspect_dict, "herring_action", rh), Hide("redHerring"), Show("redHerring", inv_item = inspect_dict)]
 
-            if inspect_dict["herring_action"] != None: ## whenever the herring_action has been chosen
+        if inspect_dict["herring_action"] != "":
 
-                if rh_actions.index(herring_action) <= 2: ## if the action is anywhere between indices 0-2, let the player choose from the suspect list in a dropdown
-                    imagebutton chosen_culprit_image:
-                        action Show("suspect_dropdown", item = inv_item)
+            vbox:
+                spacing 20
+                align (0.8, 0.5)
 
-            ## if the action is indices 3 or 4, open up and let the player choose a statement related to the item
-            ## if the action is the last action on the list, don't pick anything
-            ## after going through this, save the item's herring_culprit which will be either a statement or a suspect from the list
+                if rh_actions.index(inspect_dict["herring_action"]) <= 2: ## if the action is anywhere between indices 0-2, let the player choose from the suspect list in a dropdown
 
-            ##imagebutton:
-            ##    chosen_culprit_image
+                    python:
+                        if inspect_dict["herring_culprit"] == "" or inspect_dict["herring_culprit"] == ".": ## if a culprit hasn't been defined, just show the default image
+                            chosen_culprit_image = "gui/profiles/default_icon.png"
 
+                    button:
+                        image chosen_culprit_image
+                        action Show("suspect_dropdown", item = inspect_dict)
 
-##screen save_statement(who, what):
+                    text inspect_dict["herring_culprit"] size 30 align (0.8, 0.6) color "#000000"
+
+                elif rh_actions.index(inspect_dict["herring_action"]) == 3 or rh_actions.index(inspect_dict["herring_action"]) == 4: ## if the action is one that prompts a statement that contradicts it, do it
+
+                    python:
+                        if inspect_dict["deja_statement"] == "":
+                            inspect_dict["deja_statement"] = "Statement not found."
+
+                        if inspect_dict["taffy_statement"] == "":
+                            inspect_dict["taffy_statement"] = "Statement not found."
+
+                        if inspect_dict["maddie_statement"] == "":
+                            inspect_dict["maddie_statement"] = "Statement not found."
+
+                    textbutton inspect_dict["deja_statement"]:
+                        action If(inspect_dict["deja_statement"] == "Statement not found.", true=NullAction(),
+                        false=((SetDict(inspect_dict, "herring_culprit", inspect_dict["deja_statement"]),
+                        SetVariable("{}_dict".format(inspect_dict["current_item"].lower().replace(" ", "_")), inspect_dict))))
+
+                    textbutton inspect_dict["taffy_statement"]:
+                        action If(inspect_dict["taffy_statement"] == "Statement not found.", true=NullAction(),
+                        false=((SetDict(inspect_dict, "herring_culprit", inspect_dict["taffy_statement"]),
+                        SetVariable("{}_dict".format(inspect_dict["current_item"].lower().replace(" ", "_")), inspect_dict))))
+
+                    textbutton inspect_dict["maddie_statement"]:
+                        action If(inspect_dict["maddie_statement"] == "Statement not found.", true=NullAction(),
+                        false=((SetDict(inspect_dict, "herring_culprit", inspect_dict["maddie_statement"]),
+                        SetVariable("{}_dict".format(inspect_dict["current_item"].lower().replace(" ", "_")), inspect_dict))))
+
+        #button:
+        #    background "#FFFFFF"
+        #    action [SetDict(inspect_dict, "herring_culprit", ""),
+        #    SetDict(inspect_dict, "herring_action", ""),
+        #    SetVariable(inv_item, inspect_dict)]
+        #    text "Clear selection"
 
 screen inspectItem(items):
+
     modal True
     zorder 4
     button:
@@ -307,35 +360,44 @@ screen inspectItem(items):
         yfill True
         action [If(len(items) > 1, true=RemoveFromSet(items, items[0]), false=[Hide("inspectItem"), If(len(dnd_dialogue) > 0, true=Show("characterSay"), false=NullAction())]), Hide("dropdown_menu")]
         image "dnd_test_files/Items Pop Up/items-pop-up-bg.png" align (0.5, 0.5)
-        if "mail" in inventory_items:
-            $ mail_state = inventory_sprites[inventory_items.index("mail")].state
+        #if "mail" in inventory_items:
+        #    $ mail_state = inventory_sprites[inventory_items.index("mail")].state
 
         python:
             item_name = ""
-            item_desc = ""
+        #    item_desc = ""
             #item_state = ""
             for name in inventory_item_names: ## gets the name of the item from the inventory_item_names list
                 temp_name = name.replace(" ", "_")
                 if temp_name.lower() == items[0]:
                     item_name = name
-            for desc in inventory_item_desc:
-                if inventory_item_desc.index(desc) == inventory_item_names.index(item_name):
-                    item_desc = desc
-                elif item_name == "Mail" and mail_state == "checked":
-                    item_desc = "Confirmed to be Maddie's handwriting."
+        #    for desc in inventory_item_desc:
+        #        if inventory_item_desc.index(desc) == inventory_item_names.index(item_name):
+        #            item_desc = desc
+        #        elif item_name == "Mail" and mail_state == "checked":
+        #            item_desc = "Confirmed to be Maddie's handwriting."
             ## get the description from a list
             ## check if the index of the item and the index of the description matches, and if it does you have your description
 
-        if items[0] == "mail":
-            image "test_case/evidence popup/{}_{}_popup.png".format("mail", mail_state) at half_size align (0.4, 0.5)
-        else:
-            image "test_case/evidence popup/{}_popup.png".format(items[0]) at half_size align (0.4, 0.5)
+        #if items[0] == "mail":
+        #    image "test_case/evidence popup/{}_{}_popup.png".format("mail", mail_state) at half_size align (0.4, 0.5)
+        #else:
+        #    image "test_case/evidence popup/{}_popup.png".format(items[0]) at half_size align (0.4, 0.5)
+
+        image inspect_dict["item_image_inspect"] at half_size align (0.4, 0.5)
 
         text "{}".format(inspect_dict["current_item"]) size 30 align (0.5, 0.28) color "#000000"
         text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) xsize 300 ## show the description to the right of the image below
+        if inspect_dict["herring_action"] != "": ## show the red herring if it's been defined
+            if inspect_dict["herring_culprit"] == "." or inspect_dict["herring_culprit"] == "": ## if there isn't a culprit or statement defined, don't worry about it
+                text "{}".format(inspect_dict["herring_action"] + inspect_dict["herring_culprit"]) size 25 align (0.6, 0.5) xsize 300 color "#FF0000"
+            elif rh_actions.index(inspect_dict["herring_action"]) == 3 or rh_actions.index(inspect_dict["herring_action"]) == 4:
+                text "{}".format(inspect_dict["herring_action"] + " \"{}\"".format(inspect_dict["herring_culprit"])) size 25 align (0.6, 0.5) xsize 300 color "#FF0000"
+            else:
+                text "{}".format(inspect_dict["herring_action"] + " " + inspect_dict["herring_culprit"] + ".") size 25 align (0.6, 0.5) xsize 300 color "#FF0000"
 
         button:
-            align (0.6, 0.56)
+            align (0.6, 0.6)
             action [SetVariable("current_item", item_name), Show("dropdown_menu")]
             frame:
                 text "▼ " + inspect_dict["action"]
@@ -404,15 +466,15 @@ screen maddies_house_scene:
         action Show("suspect_list")
         text "Open suspects list" color "#000000" size 18
 
-    imagebutton:
-        auto "images/sprites/maddie_invest_%s.png" at half_size
-        align(0.6, 0.8)
-        action [Hide("inventory"), Jump("maddie_intro")]
+    #imagebutton:
+    #    auto "images/sprites/maddie_invest_%s.png" at half_size
+    #    align(0.6, 0.8)
+    #    action [Hide("inventory"), Jump("maddie_intro")]
 
-    imagebutton:
-        auto "images/sprites/taffy_invest_%s.png" at half_size
-        align(0.3, 0.6)
-        action [Hide("inventory"), Jump("taffy_intro")]
+    #imagebutton:
+    #    auto "images/sprites/taffy_invest_%s.png" at half_size
+    #    align(0.3, 0.6)
+    #    action [Hide("inventory"), Jump("taffy_intro")]
 
 screen maddies_backyard_scene:
     add environment_SM
@@ -463,7 +525,7 @@ transform half_size:
 # point and click setup
 label setup_scene_maddies_house:
 
-    $ environment_items = ["mail", "grocery_list", "champagne"]
+    $ environment_items = ["mail", "grocery_list", "champagne", "taffy", "maddie"]
     $ current_scene = "maddies_house_scene"
 
     python:
@@ -505,6 +567,18 @@ label setup_scene_maddies_house:
                     environment_sprites[-1].height = 56
                     environment_sprites[-1].x = 55
                     environment_sprites[-1].y = 700
+
+                elif item == "taffy":
+                    environment_sprites[-1].width = 400
+                    environment_sprites[-1].height = 720
+                    environment_sprites[-1].x = 200
+                    environment_sprites[-1].y = 200
+
+                elif item == "maddie":
+                    environment_sprites[-1].width = 500
+                    environment_sprites[-1].height = 667
+                    environment_sprites[-1].x = 1000
+                    environment_sprites[-1].y = 100
 
                 renpy.retain_after_load()
 

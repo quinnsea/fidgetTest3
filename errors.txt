@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/test_case/test_case_setup.rpy", line 218: 'inspect_dict' is not a keyword argument or valid child of the for statement.
-    inspect_dict = dict["current_item"]
-                ^
+File "game/test_case/test_case_setup.rpy", line 298: frame expects a non-empty block.
+    if inspect_dict["herring_action"] != "":
+                                            ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Jan 14 00:36:10 2024
+Sun Feb  4 15:52:33 2024
