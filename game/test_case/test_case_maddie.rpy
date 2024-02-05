@@ -1,6 +1,7 @@
 label maddie_intro:
-    show maddie investigate at center
+    show maddie investigate
     hide screen dnd_ui
+    hide screen inventory
 
     if seen_maddie == False:
         $ seen_maddie = True
@@ -31,13 +32,6 @@ label maddie_intro_cont:
 label maddie_ask:
     menu:
         "What should I ask her about?"
-
-        "Roses" if "roses" in inventory_items:
-            m "...Someone stole a rose."
-            l "You didn't take it out yourself?"
-            m "Nope. I never touch roses without my gardening gloves."
-
-            jump maddie_ask
 
         "Mail" if "mail" in inventory_items:
             $ maddie_ask_jason = True

@@ -1,6 +1,7 @@
 label taffy_intro:
     show taffy investigate
     hide screen dnd_ui
+    hide screen inventory
 
     if seen_taffy == False:
         $ seen_taffy = True
@@ -52,6 +53,7 @@ label taffy_ask:
             jump taffy_ask_end
 
 label taffy_mail:
+    show taffy investigate
     "Taffy leans in after I read out the letter."
     #"I can feel my legs turning to jello when he whispers in my ear."
     ta "Where'd you get this?" ##THIS WOULD BE AN APPROPRIATE DIALOGUE FREAK OUT PLACE
@@ -118,6 +120,7 @@ label taffy_grocery_list:
     jump taffy_default
 
 label taffy_broken_door:
+    show taffy investigate
 
     if taffy_ask_jason == False:
         jump taffy_default
@@ -135,6 +138,7 @@ label taffy_broken_door:
         jump taffy_ask_end
 
 label taffy_footprints:
+    show taffy investigate
 
     "I glance down at Taffy's shoes and blurt it out without thinking."
     l "Do we have the same shoes?"
@@ -148,6 +152,7 @@ label taffy_footprints:
     jump taffy_ask_end
 
 label taffy_champagne:
+    show taffy investigate
 
     "Taffy hisses a slow breath of air after I bring up the champagne."
     ta "{i}Yeah, that was a mistake...{/i}"
@@ -158,6 +163,7 @@ label taffy_champagne:
     jump taffy_ask_end
 
 label taffy_head:
+    show taffy investigate
 
     "I can't show it to him, but I might be able to figure out who it is if I {i}describe{/i} it."
 
@@ -192,4 +198,4 @@ label taffy_ask_end:
     hide taffy
     show screen dnd_ui
 
-    call screen maddies_house_scene
+    jump setup_scene_maddies_house

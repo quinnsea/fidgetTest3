@@ -407,3 +407,842 @@ Well, Jason lives right next door, doesn't he?
 gui/profiles/default_icon.png
 Well, Jason lives right next door, doesn't he?
 gui/profiles/default_icon.png
+Well, Jason lives right next door, doesn't he?
+gui/profiles/default_icon.png
+Well, Jason lives right next door, doesn't he?
+gui/profiles/default_icon.png
+Resetting cache.
+Bootstrap to the start of init.init. took 5374.15s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+attempting to call intro
+Resetting cache.
+Bootstrap to the start of init.init. took 5395.76s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.15s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5495.77s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+attempting to call intro
+attempting to call intro
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5574.59s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5579.36s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+item is combining with an environment item
+item convo is being called
+attempting to call intro
+Resetting cache.
+Bootstrap to the start of init.init. took 5655.21s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.14s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+attempting to call intro
+Resetting cache.
+Bootstrap to the start of init.init. took 5673.61s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+item is combining with an environment item
+item convo is being called
+attempting to call intro
+Resetting cache.
+Bootstrap to the start of init.init. took 5692.04s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.13s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.01s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5721.01s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+attempting to call intro
+Resetting cache.
+Bootstrap to the start of init.init. took 5736.37s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.01s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.01s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.03s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 5763.82s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.11s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.02s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+attempting to call intro
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+item is combining with an environment item
+item convo is being called
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+I was trying to teach Deja how to pop it. My bad.
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Where'd you get this?
+gui/profiles/default_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+item is combining with an environment item
+item convo is being called
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Taffy
+gui/profiles/taffy_icon.png
+Deja
+gui/profiles/deja_icon.png
+Deja
+gui/profiles/deja_icon.png
+Deja
+gui/profiles/deja_icon.png
+Resetting cache.
+Bootstrap to the start of init.init. took 7384.31s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  [Previous line repeated 9 more times]
+  File "game/test_case/test_case_setup.rpy", line 693, in script
+    call screen jasons_house_scene
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 414, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 416, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 419, in execute
+    if who is not None:
+  File "game/test_case/test_case_setup.rpy", line 424, in execute
+    text dnd_dialogue["who"]
+  File "game/test_case/test_case_setup.rpy", line 424, in <module>
+    text dnd_dialogue["who"]
+KeyError: 'who'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  [Previous line repeated 9 more times]
+  File "game/test_case/test_case_setup.rpy", line 693, in script
+    call screen jasons_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 414, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 416, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 419, in execute
+    if who is not None:
+  File "game/test_case/test_case_setup.rpy", line 424, in execute
+    text dnd_dialogue["who"]
+  File "game/test_case/test_case_setup.rpy", line 424, in <module>
+    text dnd_dialogue["who"]
+KeyError: 'who'
+Resetting cache.
+Bootstrap to the start of init.init. took 7393.61s
+Early init. took 0.00s
+Loader init. took 0.02s
+Loading error handling. took 0.02s
+Loading script. took 0.12s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.02s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.04s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.05s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+
+Full traceback:
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  [Previous line repeated 9 more times]
+  File "game/test_case/test_case_setup.rpy", line 693, in script
+    call screen jasons_house_scene
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
+    self.call("execute")
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
+    return renpy.statements.call(method, parsed, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
+    return method(parsed, *args, **kwargs)
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
+    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
+    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
+    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
+    d.visit_all(callback, seen)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
+    callback(self)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
+    root_widget.visit_all(lambda d : d.per_interact())
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
+    self.update()
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
+    self.screen.function(**self.scope)
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 414, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 416, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 419, in execute
+    if who is not None:
+  File "game/test_case/test_case_setup.rpy", line 424, in execute
+    text dnd_dialogue["who"]
+  File "game/test_case/test_case_setup.rpy", line 424, in <module>
+    text dnd_dialogue["who"]
+KeyError: 'who'
+
+While running game code:
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  File "game/test_case/test_case_setup.rpy", line 587, in script call
+    call screen maddies_house_scene
+  [Previous line repeated 9 more times]
+  File "game/test_case/test_case_setup.rpy", line 693, in script
+    call screen jasons_house_scene
+  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
+    store._return = renpy.call_screen(name, *args, **kwargs)
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 409, in execute
+    screen characterSay(who = None, what = None): ## default values
+  File "game/test_case/test_case_setup.rpy", line 414, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 416, in execute
+    window:
+  File "game/test_case/test_case_setup.rpy", line 419, in execute
+    if who is not None:
+  File "game/test_case/test_case_setup.rpy", line 424, in execute
+    text dnd_dialogue["who"]
+  File "game/test_case/test_case_setup.rpy", line 424, in <module>
+    text dnd_dialogue["who"]
+KeyError: 'who'

@@ -250,7 +250,6 @@ init python:
                             else:
 
                                 print("attempting to call intro")
-
                                 renpy.call("{}_intro".format(item.type))
 
                 global i_overlap, ie_overlap
