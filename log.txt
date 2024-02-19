@@ -1,16 +1,152 @@
-Sun Feb  4 16:48:38 2024
+Sun Feb 18 15:36:26 2024
 Windows-10-10.0.19045
 Ren'Py 8.1.1.23060707
  
 
-Bootstrap to the start of init.init. took 0.02s
+Bootstrap to the start of init.init. took 0.04s
 Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.03s
-Loading script. took 0.16s
-Loading save slot metadata. took 0.04s
+Loader init. took 0.03s
+Loading error handling. took 0.04s
+Loading script. took 0.24s
+Loading save slot metadata. took 0.07s
 Loading persistent. took 0.00s
-Running init code. took 0.04s
+Running init code. took 0.05s
+Loading analysis data. took 0.03s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.03s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.03s
+Build styles took 0.00s
+Load screen analysis took 0.02s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.03s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+fail fade variable reset
+Resetting cache.
+Bootstrap to the start of init.init. took 340.82s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.29s
+Loading save slot metadata. took 0.06s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.05s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.04s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.02s
+Save bytecode. took 0.01s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 359.60s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.05s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.04s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.04s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.05s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.05s
+Build styles took 0.00s
+Load screen analysis took 0.00s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.06s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.04s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 397.95s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.03s
+Loading script. took 0.17s
+Loading save slot metadata. took 0.03s
+Loading persistent. took 0.00s
+Running init code. took 0.03s
 Loading analysis data. took 0.02s
 Analyze and compile ATL. took 0.00s
 Reloading save slot metadata. took 0.03s
@@ -19,20 +155,65 @@ Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fi
 Dump and make backups. took 0.04s
 Cleaning cache. took 0.00s
 Making clean stores. took 0.00s
-Initial gc. took 0.01s
+Initial gc. took 0.05s
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
 Creating interface object. took 0.00s
 Cleaning stores took 0.00s
-Init translation took 0.02s
+Init translation took 0.06s
 Build styles took 0.00s
 Load screen analysis took 0.01s
 Analyze screens took 0.01s
 Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
+Prepare screens took 0.12s
+Save pyanalysis. took 0.00s
 Save bytecode. took 0.02s
+Running _start took 0.00s
+Performance test:
+Interface start. took 0.09s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 433.30s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.18s
+Loading save slot metadata. took 0.04s
+Loading persistent. took 0.00s
+Running init code. took 0.02s
+Loading analysis data. took 0.02s
+Analyze and compile ATL. took 0.00s
+Reloading save slot metadata. took 0.03s
+Index archives took 0.00s
+Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
+Dump and make backups. took 0.05s
+Cleaning cache. took 0.00s
+Making clean stores. took 0.00s
+Initial gc. took 0.09s
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Creating interface object. took 0.00s
+Cleaning stores took 0.00s
+Init translation took 0.08s
+Build styles took 0.00s
+Load screen analysis took 0.01s
+Analyze screens took 0.01s
+Save screen analysis took 0.02s
+Prepare screens took 0.07s
+Save pyanalysis. took 0.00s
+Save bytecode. took 0.01s
 Running _start took 0.00s
 Performance test:
 Interface start. took 0.05s
@@ -45,780 +226,50 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-item is combining with an environment item
-item convo is being called
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/taffy_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/taffy_icon.png
-Resetting cache.
-Bootstrap to the start of init.init. took 34.83s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.03s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-
-Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_taffy.rpy", line 195, in script
-    call screen maddies_house_scene
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 354, in execute
-    screen inspectItem(items):
-  File "game/test_case/test_case_setup.rpy", line 354, in execute
-    screen inspectItem(items):
-  File "game/test_case/test_case_setup.rpy", line 358, in execute
-    button:
-  File "game/test_case/test_case_setup.rpy", line 391, in execute
-    if inspect_dict["herring_action"] != "": ## show the red herring if it's been defined
-  File "game/test_case/test_case_setup.rpy", line 392, in execute
-    if inspect_dict["herring_culprit"] == "." or inspect_dict["herring_culprit"] == "": ## if there isn't a culprit or statement defined, don't worry about it
-  File "game/test_case/test_case_setup.rpy", line 395, in execute
-    text "{}".format(inspect_dict["herring_action"] + " \"{i}{}{/i}\"".format(inspect_dict["herring_culprit"])) size 25 align (0.6, 0.6) xsize 300 color "#FF0000"
-  File "game/test_case/test_case_setup.rpy", line 395, in <module>
-    text "{}".format(inspect_dict["herring_action"] + " \"{i}{}{/i}\"".format(inspect_dict["herring_culprit"])) size 25 align (0.6, 0.6) xsize 300 color "#FF0000"
-KeyError: 'i'
-
-While running game code:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_taffy.rpy", line 195, in script
-    call screen maddies_house_scene
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 354, in execute
-    screen inspectItem(items):
-  File "game/test_case/test_case_setup.rpy", line 354, in execute
-    screen inspectItem(items):
-  File "game/test_case/test_case_setup.rpy", line 358, in execute
-    button:
-  File "game/test_case/test_case_setup.rpy", line 391, in execute
-    if inspect_dict["herring_action"] != "": ## show the red herring if it's been defined
-  File "game/test_case/test_case_setup.rpy", line 392, in execute
-    if inspect_dict["herring_culprit"] == "." or inspect_dict["herring_culprit"] == "": ## if there isn't a culprit or statement defined, don't worry about it
-  File "game/test_case/test_case_setup.rpy", line 395, in execute
-    text "{}".format(inspect_dict["herring_action"] + " \"{i}{}{/i}\"".format(inspect_dict["herring_culprit"])) size 25 align (0.6, 0.6) xsize 300 color "#FF0000"
-  File "game/test_case/test_case_setup.rpy", line 395, in <module>
-    text "{}".format(inspect_dict["herring_action"] + " \"{i}{}{/i}\"".format(inspect_dict["herring_culprit"])) size 25 align (0.6, 0.6) xsize 300 color "#FF0000"
-KeyError: 'i'
-Resetting cache.
-Bootstrap to the start of init.init. took 53.32s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 123.15s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.10s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Dump and make backups. took 0.03s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
 Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
+fail fade variable reset
+fail fade variable reset
 Resetting cache.
-Bootstrap to the start of init.init. took 158.14s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.01s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-Resetting cache.
-Bootstrap to the start of init.init. took 181.22s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.02s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
-Maximum texture size: 4096x4096
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-item is combining with an environment item
-item convo is being called
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Well, Jason lives right next door, doesn't he?
-gui/profiles/default_icon.png
-Resetting cache.
-Bootstrap to the start of init.init. took 5374.15s
+Bootstrap to the start of init.init. took 823.08s
 Early init. took 0.00s
 Loader init. took 0.03s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.00s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-attempting to call intro
-Resetting cache.
-Bootstrap to the start of init.init. took 5395.76s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.15s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.03s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 5495.77s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.17s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
-Maximum texture size: 4096x4096
-attempting to call intro
-attempting to call intro
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 5574.59s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.11s
-Loading save slot metadata. took 0.04s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.06s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 5579.36s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.11s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-item is combining with an environment item
-item convo is being called
-attempting to call intro
-Resetting cache.
-Bootstrap to the start of init.init. took 5655.21s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.14s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-attempting to call intro
-Resetting cache.
-Bootstrap to the start of init.init. took 5673.61s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.13s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-item is combining with an environment item
-item convo is being called
-attempting to call intro
-Resetting cache.
-Bootstrap to the start of init.init. took 5692.04s
-Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.13s
-Loading save slot metadata. took 0.03s
-Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.01s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
-DPI scale factor: 1.000000
-nvdrs: Loaded, about to disable thread optimizations.
-nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
-
-Initializing gl2 renderer:
-primary display bounds: (0, 0, 1920, 1080)
-swap interval: 1 frames
-Windowed mode.
-Vendor: "b'ATI Technologies Inc.'"
-Renderer: b'AMD Radeon RX 6600'
-Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
-Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
-Maximum texture size: 4096x4096
-Resetting cache.
-Bootstrap to the start of init.init. took 5721.01s
-Early init. took 0.00s
-Loader init. took 0.02s
 Loading error handling. took 0.02s
 Loading script. took 0.22s
 Loading save slot metadata. took 0.03s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+
+File "game/dialogue_demo.rpy", line 103: if statement expects a non-empty block.
+    if has_salad == True:
+                         ^
+
+File "game/dialogue_demo.rpy", line 105: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "Oh no…"
+    ^
+
+File "game/dialogue_demo.rpy", line 117: expected menuitem
+    else:
+    ^
+
+File "game/dialogue_demo.rpy", line 191: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 193: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 214: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
+Interface start. took 0.08s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -828,43 +279,1176 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-attempting to call intro
 Resetting cache.
-Bootstrap to the start of init.init. took 5736.37s
+Bootstrap to the start of init.init. took 836.87s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 103: if statement expects a non-empty block.
+    if has_salad == True:
+                         ^
+
+File "game/dialogue_demo.rpy", line 105: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "Oh no…"
+    ^
+
+File "game/dialogue_demo.rpy", line 117: expected menuitem
+    else:
+    ^
+
+File "game/dialogue_demo.rpy", line 191: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 193: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 214: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 844.62s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 103: if statement expects a non-empty block.
+    if has_salad == True:
+                         ^
+
+File "game/dialogue_demo.rpy", line 105: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "Oh no…"
+    ^
+
+File "game/dialogue_demo.rpy", line 117: expected menuitem
+    else:
+    ^
+
+File "game/dialogue_demo.rpy", line 191: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 193: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 214: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 862.88s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 103: if statement expects a non-empty block.
+    if has_salad == True:
+                         ^
+
+File "game/dialogue_demo.rpy", line 105: Line is indented, but the preceding say statement statement does not expect a block. Please check this line's indentation. You may have forgotten a colon (:).
+    "Oh no…"
+    ^
+
+File "game/dialogue_demo.rpy", line 117: expected menuitem
+    else:
+    ^
+
+File "game/dialogue_demo.rpy", line 191: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 193: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 214: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 947.37s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 192: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 194: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 213: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 215: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 950.62s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 193: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 195: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 214: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 216: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 956.90s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 194: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 196: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 215: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 217: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 979.68s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.24s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 195: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 197: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 216: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 218: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1000.98s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 74: is not terminated with a newline. (Check strings and parenthesis.)
+                $ key_list = ["q"
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1008.72s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 195: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 197: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 216: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 218: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1064.61s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 197: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 199: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 218: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 220: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1286.05s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 198: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 200: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 219: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 221: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+
+File "game/dialogue_demo.rpy", line 50: invalid syntax
+    fail_label =
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1304.31s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 198: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 200: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 219: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 221: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1310.54s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 198: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 200: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 219: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 221: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1322.80s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 106: expected 'label_name' not found.
+    jump 
+        ^
+
+File "game/dialogue_demo.rpy", line 199: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 201: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 220: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1333.55s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 199: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 201: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 220: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.08s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1339.72s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1342.96s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1355.22s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1358.45s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1361.68s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1364.92s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1368.14s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1390.91s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.22s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 201: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 203: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 222: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 224: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1407.67s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 202: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 204: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 223: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 225: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1419.92s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.23s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 202: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 204: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 223: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 225: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1445.70s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 204: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 206: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 225: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 227: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1474.49s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.02s
+Loading script. took 0.21s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 206: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 208: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 227: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 229: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.07s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1602.61s
+Early init. took 0.00s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.20s
+Loading save slot metadata. took 0.02s
+Loading persistent. took 0.00s
+
+File "game/dialogue_demo.rpy", line 208: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 210: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 229: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 231: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
+DPI scale factor: 1.000000
+nvdrs: Loaded, about to disable thread optimizations.
+nvdrs: b"Couldn't load nvlib." (can be ignored)
+Interface start. took 0.06s
+
+Initializing gl2 renderer:
+primary display bounds: (0, 0, 1920, 1080)
+swap interval: 1 frames
+Windowed mode.
+Vendor: "b'ATI Technologies Inc.'"
+Renderer: b'AMD Radeon RX 6600'
+Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
+Display Info: None
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
+Maximum texture size: 4096x4096
+Resetting cache.
+Bootstrap to the start of init.init. took 1920.20s
+Early init. took 0.00s
+Loader init. took 0.03s
 Loading error handling. took 0.02s
 Loading script. took 0.19s
-Loading save slot metadata. took 0.03s
+Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.03s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
+
+File "game/dialogue_demo.rpy", line 210: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 231: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 233: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.01s
-Prepare screens took 0.07s
-Save pyanalysis. took 0.01s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.03s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -874,42 +1458,36 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
 Resetting cache.
-Bootstrap to the start of init.init. took 5763.82s
+Bootstrap to the start of init.init. took 1951.96s
 Early init. took 0.00s
-Loader init. took 0.02s
-Loading error handling. took 0.02s
-Loading script. took 0.11s
-Loading save slot metadata. took 0.03s
+Loader init. took 0.03s
+Loading error handling. took 0.01s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.03s
+
+File "game/dialogue_demo.rpy", line 210: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 212: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 231: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 233: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.02s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -919,109 +1497,40 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-attempting to call intro
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-item is combining with an environment item
-item convo is being called
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-I was trying to teach Deja how to pop it. My bad.
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Where'd you get this?
-gui/profiles/default_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-item is combining with an environment item
-item convo is being called
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Taffy
-gui/profiles/taffy_icon.png
-Deja
-gui/profiles/deja_icon.png
-Deja
-gui/profiles/deja_icon.png
-Deja
-gui/profiles/deja_icon.png
 Resetting cache.
-Bootstrap to the start of init.init. took 7384.31s
+Bootstrap to the start of init.init. took 1991.24s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.03s
 Loading error handling. took 0.02s
-Loading script. took 0.12s
-Loading save slot metadata. took 0.04s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.04s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
+
+File "game/dialogue_demo.rpy", line 113: else clause expects a non-empty block.
+    else:
+         ^
+
+File "game/dialogue_demo.rpy", line 215: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 217: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 236: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 238: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1031,126 +1540,36 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'
-
-While running game code:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'
 Resetting cache.
-Bootstrap to the start of init.init. took 7393.61s
+Bootstrap to the start of init.init. took 2003.43s
 Early init. took 0.00s
-Loader init. took 0.02s
+Loader init. took 0.03s
 Loading error handling. took 0.02s
-Loading script. took 0.12s
-Loading save slot metadata. took 0.03s
+Loading script. took 0.19s
+Loading save slot metadata. took 0.02s
 Loading persistent. took 0.00s
-Running init code. took 0.02s
-Loading analysis data. took 0.02s
-Analyze and compile ATL. took 0.00s
-Reloading save slot metadata. took 0.02s
-Index archives took 0.00s
-Backing up script files to 'C:\\Users\\Quinn\\AppData\\Roaming/RenPy/backups\\fidgetTest3':
-Dump and make backups. took 0.04s
-Cleaning cache. took 0.00s
-Making clean stores. took 0.00s
-Initial gc. took 0.04s
+
+File "game/dialogue_demo.rpy", line 216: menu statement expects a non-empty block.
+    menu:
+        ^
+
+File "game/dialogue_demo.rpy", line 218: expected statement.
+    "I’d rather have extra bread.":
+                                  ^
+
+File "game/dialogue_demo.rpy", line 237: expected statement.
+    "I didn’t say that. (Lie)":
+                              ^
+
+File "game/dialogue_demo.rpy", line 239: expected statement.
+    "You don’t need to go on a diet.":
+                                     ^
 DPI scale factor: 1.000000
 nvdrs: Loaded, about to disable thread optimizations.
 nvdrs: b"Couldn't load nvlib." (can be ignored)
-Creating interface object. took 0.00s
-Cleaning stores took 0.00s
-Init translation took 0.03s
-Build styles took 0.00s
-Load screen analysis took 0.01s
-Analyze screens took 0.01s
-Save screen analysis took 0.02s
-Prepare screens took 0.05s
-Save pyanalysis. took 0.00s
-Save bytecode. took 0.01s
-Running _start took 0.00s
-Performance test:
-Interface start. took 0.04s
+Interface start. took 0.06s
 
 Initializing gl2 renderer:
 primary display bounds: (0, 0, 1920, 1080)
@@ -1160,89 +1579,5 @@ Vendor: "b'ATI Technologies Inc.'"
 Renderer: b'AMD Radeon RX 6600'
 Version: b'4.6.0 Compatibility Profile Context 23.9.3.230915'
 Display Info: None
-Screen sizes: virtual=(1920, 1080) physical=(1920, 1017) drawable=(1920, 1017)
+Screen sizes: virtual=(1920, 1080) physical=(1739, 978) drawable=(1739, 978)
 Maximum texture size: 4096x4096
-
-Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
-    rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
-    repeat, rv = self.interact_core(preloads=preloads, trans_pause=trans_pause, pause=pause, pause_start=pause_start, pause_modal=pause_modal, **kwargs) # type: ignore
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in interact_core
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 681, in visit_all
-    d.visit_all(callback, seen)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 476, in visit_all
-    callback(self)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 4052, in <lambda>
-    root_widget.visit_all(lambda d : d.per_interact())
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 487, in per_interact
-    self.update()
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
-    self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'
-
-While running game code:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'

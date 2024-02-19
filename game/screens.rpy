@@ -99,7 +99,7 @@ style frame:
 #default current_dialogue = ""
 
 screen say(who, what):
-    if is_investigating == True and who != None and current_item != None:
+    if is_investigating == True and (who != None or "Levi") and current_item != None: ## added "or "levi"", might fuck up code
 
         button:
             background "#FFFFFF"
@@ -268,10 +268,10 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action [SetVariable("wait_dialogue", 0), i.action, If(do_start_timer == True, true=Show("countdown"), false=NullAction())]
+            textbutton i.caption action [i.action, Function(startCountdownChoice)]
 
     if choice_menu != "":
-        timer 5.0 action [SetVariable("wait_dialogue", wait_dialogue+1), Jump(choice_menu)]
+        timer 4.0 action [SetVariable("wait_dialogue", wait_dialogue+1), Jump(choice_menu)]
 
     ## we want to be able to start qtes from here, but finishing it will be handled by a different screen. if it's the trigger qte, the expression will change
     key "K_q" action If(is_mashing == False and can_mash == True, true=(SetVariable("mash_count", mash_count+1.0), SetVariable("is_mashing", True), SetVariable("start_key", "q")), false=NullAction())
@@ -346,23 +346,42 @@ init python:
             #elif start_key == trigger_key: # if the key we're looking for will cause a reaction
 
             else: # if the key you mashed is the wrong one, the qte was failed
+                print("failed the qte")
                 is_mashing = False
                 can_mash = False
                 renpy.hide_screen("countdown")
+                renpy.show_screen("show_fail")
                 renpy.call(fail_label)
+
+    def startCountdownChoice():
+        global do_start_timer, wait_dialogue, sprite1, sprite_changed, can_mash
+
+        if do_start_timer == False: ## if we aren't supposed to start the timer, don't call the countdown screen
+            return
+
+        else: ## if we are, call the countdown screen and reset the dialogue counter
+            wait_dialogue = 0
+            can_mash = True
+            renpy.show_screen("countdown")
+
+        if sprite1 != None and sprite_changed != True: ## if a sprite is defined and needs to change, call the screen
+            renpy.show_screen("sprite_change_screen")
+
+        elif sprite_changed == True: ## if a sprite has been changed, allow the player to call it out and hide the sprite change screen
+            renpy.hide_screen("sprite_change_screen")
 
 screen mash_screen:
     if start_key == "e":
         $ start_key = "q"
 
     if start_key == "q":
-        $ qte_image = "images/levi_eyecontact.png"
+        $ qte_image = "dnd_test_files/UI/smile_icon.png"
 
     elif start_key == "w":
-        $ qte_image = "images/levi_smile.png"
+        $ qte_image = "dnd_test_files/UI/eye_contact_icon.png"
 
     elif start_key == "2":
-        $ qte_image = "images/levi_breathe.png"
+        $ qte_image = "dnd_test_files/UI/hands_icon.png"
 
     image qte_image xalign 0.5 ypos 450 alpha (mash_count/max_mash)
 
@@ -370,6 +389,25 @@ screen mash_screen:
     key "K_e" action [Function(handleMash, "q"), Show("mash_screen"), Hide("mash_screen")] # ^^^
     key "K_w" action [Function(handleMash, "w"), Show("mash_screen"), Hide("mash_screen")] # nailbiting = nervous
     key "K_2" action [Function(handleMash, "2"), Show("mash_screen"), Hide("mash_screen")] # taking in breaths, calming down
+
+default fail_fade = 0.7
+default max_fail_fade = 0.7
+
+screen show_fail:
+
+    image "dnd_test_files/UI/fail_icon.png" xalign 0.5 ypos 550 alpha (fail_fade/max_fail_fade)
+
+    if fail_fade > 0.0:
+
+        timer 0.1 action [SetVariable("fail_fade", fail_fade - 0.1), Hide("show_fail"), Show("show_fail")]
+
+    else:
+
+        $ fail_fade = 0.7
+
+        python:
+            print("fail fade variable reset")
+            renpy.hide_screen("show_fail")
 
 ## Timer screen / variables ####################################################
 # How much time do we have left?
@@ -382,7 +420,15 @@ default total_time = 5.0
 default do_start_timer = False
 
 screen countdown:
-    timer 0.01 repeat True action If(current_time > 0.0, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Show("fail_screen"), Jump(fail_label)))
+
+    if sprite_changed == True:
+        add sprite1 xalign 0.5 yalign 1.0 ## show the original sprite
+
+        key "K_r" action [SetVariable("sprite1", None), Hide("countdown"), ## successfully call out the change
+        SetVariable("qte_mash", 0), SetVariable("time_sprite_change", 1.0), SetVariable("can_mash", False), SetVariable("sprite_changed", False),
+        Hide("sprite_change_screen"), Jump(sprite_catch_label), Hide("qte_screen")]
+
+    timer 0.01 repeat True action If(current_time > 0.0, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Show("show_fail"), Jump(fail_label)))
 
     bar:
         value current_time
@@ -401,8 +447,6 @@ screen countdown:
     if is_mashing:
         use mash_screen
 
-screen fail_screen:
-    add "images/levi_fail.png"
 ## Quick Menu screen ###########################################################
 ##
 ## The quick menu is displayed in-game to provide easy access to the out-of-game

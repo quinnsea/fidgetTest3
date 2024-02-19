@@ -1,55 +1,33 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'
+  File "game/mash_test.rpy", line 213, in script
+    "Oh fuck, is that patronizing? He hasn't had a chance to look yet..."
+  File "game/screens.rpy", line 423, in execute
+    screen countdown:
+  File "game/screens.rpy", line 423, in execute
+    screen countdown:
+  File "game/screens.rpy", line 425, in execute
+    if sprite_change == True:
+  File "game/screens.rpy", line 425, in <module>
+    if sprite_change == True:
+NameError: name 'sprite_change' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 9 more times]
-  File "game/test_case/test_case_setup.rpy", line 693, in script
-    call screen jasons_house_scene
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2259, in execute
-    self.call("execute")
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 2241, in call
-    return renpy.statements.call(method, parsed, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\statements.py", line 342, in call
-    return method(parsed, *args, **kwargs)
-  File "renpy/common/000statements.rpy", line 670, in execute_call_screen
-    store._return = renpy.call_screen(name, *args, **kwargs)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 3345, in call_screen
-    rv = renpy.ui.interact(mouse="screen", type="screen", roll_forward=roll_forward)
+  File "game/mash_test.rpy", line 213, in script
+    "Oh fuck, is that patronizing? He hasn't had a chance to look yet..."
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 930, in execute
+    renpy.exports.say(who, what, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\exports.py", line 1473, in say
+    who(what, *args, **kwargs)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\character.py", line 1352, in __call__
+    self.do_display(who, what, cb_args=self.cb_args, dtt=dtt, **display_args)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\character.py", line 1003, in do_display
+    display_say(who,
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\character.py", line 693, in display_say
+    rv = renpy.ui.interact(mouse='say', type=type, roll_forward=roll_forward)
   File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ui.py", line 299, in interact
     rv = renpy.game.interface.interact(roll_forward=roll_forward, **kwargs)
   File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\core.py", line 3579, in interact
@@ -70,23 +48,17 @@ Full traceback:
     self.update()
   File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\display\screen.py", line 680, in update
     self.screen.function(**self.scope)
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 409, in execute
-    screen characterSay(who = None, what = None): ## default values
-  File "game/test_case/test_case_setup.rpy", line 414, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 416, in execute
-    window:
-  File "game/test_case/test_case_setup.rpy", line 419, in execute
-    if who is not None:
-  File "game/test_case/test_case_setup.rpy", line 424, in execute
-    text dnd_dialogue["who"]
-  File "game/test_case/test_case_setup.rpy", line 424, in <module>
-    text dnd_dialogue["who"]
-KeyError: 'who'
+  File "game/screens.rpy", line 423, in execute
+    screen countdown:
+  File "game/screens.rpy", line 423, in execute
+    screen countdown:
+  File "game/screens.rpy", line 425, in execute
+    if sprite_change == True:
+  File "game/screens.rpy", line 425, in <module>
+    if sprite_change == True:
+NameError: name 'sprite_change' is not defined
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
 detective test 1.2
-Sun Feb  4 18:51:52 2024
+Sun Feb 18 15:35:17 2024

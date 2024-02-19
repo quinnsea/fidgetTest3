@@ -172,20 +172,18 @@ label menu2:
         t "[menu_dialogue]"
 
         "Can you get us started with some wine?":
-            $ can_mash = True
             $ pass_label = "m2_c1_pass"
+            $ mash_label = "m2_c1"
             $ key_list = ["2"]
             jump m2_c1
 
         "What do you want, Taffy?":
-            $ can_mash = True
             $ pass_label = "m2_c2_pass"
             $ mash_label = "m2_c2"
             $ key_list = ["w", "q"]
             jump m2_c2
 
         "Is it wrong that I wanna start with dessert?":
-            $ can_mash = True
             $ pass_label = "m2_c3_pass"
             $ mash_label = "m2_c3"
             $ key_list = ["2", "q"]
