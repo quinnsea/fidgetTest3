@@ -1,5 +1,5 @@
 default has_salad = False
-label start:
+label dialogue_demo_start:
     "20 minutes..."
     "Most people would leave after 20 minutes, wouldn’t they?"
     "But... traffic is really bad in this city. Maybe they just got stuck... Or lost."
@@ -212,35 +212,3 @@ $ timer_dialogue = "What about chocolate mousse? Ugh, I’ve been on this diet a
 $ timer_dialogue = "I think I miss ice cream the most, but this place is fancy. I bet they have tiramisu."
 $ timer_dialogue = "If they offer you some, I can have it if you don’t want it."
 $ timer_dialogue = "...Please. I meant ‘Can I have it if you don’t want it? ...Pretty please?’"
-
-menu:
-t "{timer_dialogue}"
-"I’d rather have extra bread.":
-# eye contact and smile
-t "{i}Really?{/i} Is the bread here that good?"
-l "I just...don’t really like sweets."
-"Taffy seems pretty confused about that answer."
-"But... I don’t think it’s the answer he’s confused about. More that I’m nervous about confessing that in the first place."
-"Like he can see right through the fact that I don’t know if this will work if we don’t agree on everything."
-"He slides his hand across the table towards me and gestures for me to... give him mine."
-"I hesitantly put my hand in his."
-"Taffy holds it gently, and his thumb lightly rubs the back."
-"He’s still smiling at me. This much eye contact would normally kill me, but with Taffy I feel... calm."
-"I take a deep breath."
-t "Then that means more for me."
-"It’s a really dumb epiphany."
-"It’s not even an epiphany, it’s just a painfully obvious fact."
-"I feel so embarrassed. I can’t look at him."
-"Taffy leans in and tilts my head by grabbing my chin anyways. He can’t get close enough to kiss me, but he nuzzles his nose against mine. He gets the idea across."
-"...I feel really vulnerable around him."
-"In a weirdly good way. It’s... nice."
-"I didn’t say that. (Lie)":
-# eye contact
-"You don’t need to go on a diet.":
-# nervous
-"What if he thinks I’m being too bossy? Or I can’t mind my own business? There might be some other reason besides weight, I’m gonna sound like such a dick..." # timer text
-## success
-t "Yeah, I do. Doctor’s orders."
-l "...{b}{i}Really?{/i}{/b}"
-"I say it in a shocked whisper to tone down the noise coming from this table."
-t "Mhm. Something with my blood pressure, I think."

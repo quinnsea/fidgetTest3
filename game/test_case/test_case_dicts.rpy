@@ -236,7 +236,7 @@ default bite_dict = {
     "item_image_inventory": "test_case/evidence inventory/inventory_bite.png",
     "culprit_image": "",
     "culprit_name": "???",
-    "desc": "Jason was bitten. Looks like he gets bitten \na lot.",
+    "desc": "Jason was bitten. Looks like he gets bitten a lot.",
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",

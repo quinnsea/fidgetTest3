@@ -578,7 +578,7 @@ label setup_scene_maddies_house:
                     environment_sprites[-1].width = 500
                     environment_sprites[-1].height = 667
                     environment_sprites[-1].x = 1000
-                    environment_sprites[-1].y = 100
+                    environment_sprites[-1].y = 500
 
                 renpy.retain_after_load()
 
@@ -642,7 +642,7 @@ label setup_scene_jasons_house:
         ie_overlap = False
 
         if "footprints" not in inventory_items:
-            characterSay(who = "", what = ["Ah, damn.", "It looks like there were footprints going to this place.", "Could've been helpful if I didn't step all over them. Whoops."])
+            characterSay(who = "", what = ["I open the door, and... Is that my target?", "I'm no stranger to dead bodies, but one that I didn't kill is a little terrifying.", "Putting it very lightly.", "I swallow my fear and try not to scream before a head tumbles down the staircase.", "I look up, and there's a figure pointing at me.", "They disappear into a cloud of mist.", "I'm... I stand stunned for a while.", "I don't move, is this the target? Or was that the target?", "Were they pointing at me because I'm next?!", "I think about leaving, but I get a little frustrated looking at the \nfootprints on the doormat.", "Since vampires usually can't shapeshift that often that quickly, \nthey might have came in through the back.", "Maybe. Depending on how old they are.", "I better find out who did this fast.", "My heart's already pounding. The last thing I want is a hit out on me."])
             addToInventory(["footprints"])
 
     python:

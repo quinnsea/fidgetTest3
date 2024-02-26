@@ -384,6 +384,8 @@ init python:
 
     def removeInventoryItem(item):
 
+        print("removed " + item.type)
+
         item.destroy()
         inventory_sprites.pop(inventory_sprites.index(item))
         inventory_items.pop(inventory_items.index(item.type))

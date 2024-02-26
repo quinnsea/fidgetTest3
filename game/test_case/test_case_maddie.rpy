@@ -162,7 +162,9 @@ label maddie_grocery_list:
     l "Sounds like a plan. Thanks."
     "Maddie takes the grocery list from my hands... Fair, but it still sucks."
     python:
-        removeInventoryItem("grocery_list")
+        for item in inventory_sprites:
+            if item.type == "grocery_list":
+                removeInventoryItem(item)
 
     jump maddie_ask_end
 
@@ -197,6 +199,8 @@ label maddie_purse_choice:
         else:
             $ menu_dialogue = "Ugh. No, I thought you'd know the designer or something."
 
+    $ do_start_timer = True
+
     menu:
         "[menu_dialogue]"
         "I thought someone lost it.":
@@ -230,15 +234,53 @@ label maddie_purse1_pass:
     m "Or something."
     l "Are you speaking from experience?"
     "Maddie avoids eye contact with a nervous smile. It's hard not to laugh, and I start getting nervous when I let out a snort."
+    "My chest gets tight when I realize I insulted her, but she laughs with me."
     m "At least someone appreciates my trauma dumping."
+
+    jump maddie_purse_pass_cont
+
+label maddie_purse1_fail:
+    "My throat dries up. My mouth opens, but I can't get myself to say anything."
+    "What if she doesn't believe it? What if she finds out there's a murder and she thinks I did it?"
+    m "...Sorry. Did you like it?"
+    l "No, don't apologize."
+    "I get too embarrassed to even try bringing it up and tuck the purse back away."
 
     jump maddie_ask_end
 
 label maddie_purse2:
+    "It's just a question. An honest question. This one should be easy, just make it clear."
+
 label maddie_purse2_pass:
+    m "The basics. Phone, wallet, keys."
+    m "Keys might be pushing it, though. It's a little small."
+    l "But not too small to be just an accessory?"
+    m "No purse is just an accessory, we don't have pockets."
+    m "And even the ones that {i}do{/i} have pockets are so tiny you can only fit your thumbs in it."
+    "I clear my throat. I forgot. It's been too long since I wore womens' pants, I try to forget the nightmares."
+    l "Right..."
+    "That makes it extra weird that it's empty."
+
+    jump maddie_purse_pass_cont
+
+label maddie_purse2_fail:
+    "I wanna beat my head against the wall. I can't even get the nerve to ask a question."
+    m "Are you alright, Levi?"
+    "I didn't even realize that I'm tearing up a little bit when she asks."
+    l "Yeah, it's nothing."
+    l "Allergies is all."
+    "I can lie about that but I can't even ask a question?!"
+    m "Alright."
+
+    jump maddie_ask_end
 
 label maddie_purse_pass_cont:
-label maddie_purse1_fail:
+    m "So, where'd you find it?"
+    "God, why didn't I take those improv classes when I had the chance?"
+    "I almost call out asking for a line, but she manages to save me."
+    m "Doesn't matter. Enjoy the free purse, I guess."
+
+    jump maddie_ask_end
 
 label maddie_bite:
     jump maddie_default
@@ -250,6 +292,7 @@ label maddie_body:
     jump maddie_default
 
 label maddie_ask_end:
+    $ do_start_timer = False
     hide maddie
     show screen dnd_ui
 

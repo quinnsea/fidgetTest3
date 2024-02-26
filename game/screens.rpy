@@ -99,7 +99,7 @@ style frame:
 #default current_dialogue = ""
 
 screen say(who, what):
-    if is_investigating == True and (who != None or "Levi") and current_item != None: ## added "or "levi"", might fuck up code
+    if is_investigating == True and (who != None or who == "Levi") and current_item != None: ## added "or "levi"", might fuck up code
 
         button:
             background "#FFFFFF"
@@ -262,6 +262,9 @@ default wait_dialogue = 0
 
 #do we want the choices to fade in
 default choice_fade = True
+
+#what're we sayin what're we thinkin as we wait for a choice to be made
+default menu_dialogue = ""
 
 screen choice(items):
     style_prefix "choice"

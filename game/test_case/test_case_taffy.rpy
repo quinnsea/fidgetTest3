@@ -119,6 +119,9 @@ label taffy_grocery_list:
 
     jump taffy_default
 
+label taffy_security_system:
+    jump taffy_broken_door
+
 label taffy_broken_door:
     show taffy investigate
 
