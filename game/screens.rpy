@@ -313,16 +313,28 @@ init python:
     def handleMash(key_pressed):
         global mash_count, max_mash, start_key, key_list, is_mashing, can_mash, fail_label, pass_label, mash_label, current_time, total_time
 
-        if start_key == key_pressed: # if we're mashing the same key, raise the count by 1
-            if start_key == "w":
-                mash_count += 2.0
+        if (key_pressed == "e" and start_key == "q") or (key_pressed == "q" and start_key == "e"): # if we're in the q/e mash, make sure it only counts based on the last key
+            print("in q/e mash")
+            print("pressed " + key_pressed)
+            if key_pressed == "e":
+                start_key = "e"
             else:
-                mash_count += 1.0
-
-        elif (key_pressed == "e" and start_key == "q") or (key_pressed == "q" and start_key == "e"): # if we're in the q/e mash, make sure it still counts
+                start_key = "q"
             mash_count += 1.0
 
+        elif key_pressed != "q" and key_pressed != "e": # if we're not in the q/e mash
+            print("in " + key_pressed + " mash")
+            if start_key == "w" and start_key == key_pressed: # and we're hitting the "w" mash, raise the counter by 2
+                mash_count += 2.0
+            elif start_key == "2" and start_key == key_pressed: # if we're hitting the "2" mash, raise the counter by 1
+                mash_count += 1.0
+            else:
+                print("hit a different key, counter is now reset")
+                start_key = key_pressed
+                mash_count = 0.0
+
         else: # if we're hitting a new key, reset the counter
+            print("hit a different key, counter is now reset")
             start_key = key_pressed
             mash_count = 0.0
 
@@ -334,7 +346,7 @@ init python:
                 start_key = "q"
 
             if start_key in key_list: # if the start key is anywhere in the key list
-                key_list.pop(key_list.index(start_key)) # take it out
+                key_list.pop(key_list.index(start_key)) # take it out of the list
 
                 if key_list == [] and pass_label != "": # if there's no more keys to press, continue on
                     is_mashing = False
@@ -388,8 +400,8 @@ screen mash_screen:
 
     image qte_image xalign 0.5 ypos 450 alpha (mash_count/max_mash)
 
-    key "K_q" action [Function(handleMash, "e"), Show("mash_screen"), Hide("mash_screen")] # head scratch = humility/humble
-    key "K_e" action [Function(handleMash, "q"), Show("mash_screen"), Hide("mash_screen")] # ^^^
+    key "K_q" action [Function(handleMash, "q"), Show("mash_screen"), Hide("mash_screen")] # head scratch = humility/humble
+    key "K_e" action [Function(handleMash, "e"), Show("mash_screen"), Hide("mash_screen")] # ^^^
     key "K_w" action [Function(handleMash, "w"), Show("mash_screen"), Hide("mash_screen")] # nailbiting = nervous
     key "K_2" action [Function(handleMash, "2"), Show("mash_screen"), Hide("mash_screen")] # taking in breaths, calming down
 
