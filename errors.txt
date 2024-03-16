@@ -2,8 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/test_case/test_case_maddie.rpy", line 166: expected an indented block
-        if item == "grocery_list":
+File "game/screens.rpy", line 458: 'zorder' is not a keyword argument or valid child of the add statement.
+    add "gui/bar/bar_frame.png" xalign 0.5 ypos 700 zorder 99
+                                                          ^
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Feb 25 23:08:30 2024
+Sun Mar 10 19:37:08 2024

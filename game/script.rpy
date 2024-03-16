@@ -8,6 +8,8 @@ define t = Character("Taffy")
 define d = Character("Deja")
 define m = Character("Maddie")
 define ta = Character("Taffy")
+define mc = Character("Mortimer")
+define w = Character("Waitress")
 
 # sprites
 
@@ -45,10 +47,10 @@ default know_samantha = False
 label start:
 
     $ config.after_load_callbacks = [prepareLoad]
-    $ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
-    $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
+    #$ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
+    #$ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
 
-    $ is_investigating = True
+    $ is_investigating = False
 
     #$ environment_items = ["box", "door-vines", "key", "lantern"] # make sure these match up with the file names in the folder
     $ inventory_item_names = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]
@@ -58,17 +60,24 @@ label start:
     #show screen triangle
 
     #"-- Hi! Let's explain a few things before you get started. --"
-    #"-- This prototype is primarily around deducing and reaching a conclusion. --"
+    #"-- This prototype is primarily centered around deducing the relevance of evidence. --"
+    #"-- There are also instances where your character, Levi, might get stressed or anxious. --"
+    #"-- When this happens, try to mash a button to use body language that matches what you're saying. --"
+    #"-- Q and E is smiling to show joy, W is eye contact to make other people trust you, 2 is wringing your hands out of nerves. --"
+    #"-- Good luck! --"
+
     #"-- The way the game can tell that you reached a conclusion is by your evidence notes. --"
     #"-- It'll be a set of question marks by default, but after clicking it you can put in a deduction as to why that piece of evidence matters. --"
     #"-- It won't look like it, but you can change it again by clicking on whatever sentence you made. --"
     #"-- There are three possible conclusions, but none of them explain everything. --"
     #"-- Good luck! --"
 
-    show screen dnd_ui # calling the ui for the inventory
+    #show screen dnd_ui # calling the ui for the inventory
 
-    jump setup_scene_maddies_house
+    #jump setup_scene_maddies_house
 
     #jump mash_test_start
+
+    jump dialogue_demo_start
 
     #return

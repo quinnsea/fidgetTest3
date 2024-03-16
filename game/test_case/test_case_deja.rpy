@@ -50,6 +50,7 @@ label deja_ask:
             jump deja_ask_end
 
 label deja_mail:
+    
     d "Jason Hughes is having an affair with our dearest Madeline...?"
     l "Yeah. Weird, huh?"
     d "Weird in regards to {i}Madeline.{/i} Not so much for Jason."
@@ -60,6 +61,7 @@ label deja_mail:
     jump deja_ask_end
 
 label deja_black_fabric:
+
     d "Oh, that."
     d "I have no idea where it came from."
     l "...Did you even notice it until I pointed it out."
@@ -73,7 +75,8 @@ label deja_black_fabric:
     l "Someone let you pop a champagne cork?"
     d "Taffy insisted! He told me he could help!"
     l "Thanks, Deja..."
-    $ black_fabric_dict["desc"] += " Smells like champagne."
+    if "champagne" not in black_fabric_dict["desc"]:
+        $ black_fabric_dict["desc"] += " Smells like champagne."
 
     jump deja_ask_end
 

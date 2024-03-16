@@ -1,48 +1,22 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 3 more times]
-  File "game/test_case/test_case_maddie.rpy", line 164, in script
-    python:
-  File "game/test_case/test_case_maddie.rpy", line 167, in <module>
-    removeInventoryItem(item)
-  File "game/test_case/test_case_functions.rpy", line 387, in removeInventoryItem
-    print("removed " + item)
-TypeError: can only concatenate str (not "Sprite") to str
+  File "game/dialogue_demo.rpy", line 20, in script
+    w "Alright. Let me know if you need anything else."
+Exception: Sayer 'w' is not defined.
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/test_case/test_case_setup.rpy", line 587, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  File "game/test_case/test_case_maddie.rpy", line 296, in script call
-    call screen maddies_house_scene
-  [Previous line repeated 3 more times]
-  File "game/test_case/test_case_maddie.rpy", line 164, in script
-    python:
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 1138, in execute
-    renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
-  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\python.py", line 1122, in py_exec_bytecode
-    exec(bytecode, globals, locals)
-  File "game/test_case/test_case_maddie.rpy", line 167, in <module>
-    removeInventoryItem(item)
-  File "game/test_case/test_case_functions.rpy", line 387, in removeInventoryItem
-    print("removed " + item)
-TypeError: can only concatenate str (not "Sprite") to str
+  File "game/dialogue_demo.rpy", line 20, in script
+    w "Alright. Let me know if you need anything else."
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 890, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "C:\Users\Quinn\Documents\renpy-8.1.1-sdk\renpy\ast.py", line 783, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'w' is not defined.
 
 Windows-10-10.0.19045 AMD64
 Ren'Py 8.1.1.23060707
-detective test 1.2
-Sun Feb 25 23:22:06 2024
+detective test 1.3
+Sun Mar 10 14:59:03 2024

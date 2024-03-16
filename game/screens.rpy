@@ -171,6 +171,7 @@ style say_dialogue:
     ypos gui.dialogue_ypos
 
     adjust_spacing False
+    line_spacing -35
 
 ## Disable dialogue prog screen ################################################
 screen stop_scr:
@@ -271,7 +272,16 @@ screen choice(items):
 
     vbox:
         for i in items:
-            textbutton i.caption action [i.action, Function(startCountdownChoice)]
+
+            if i.action:
+
+                if " (disabled)" in i.caption:
+                    textbutton i.caption.replace(" (disabled)", "") action None
+                else:
+                    textbutton i.caption action [i.action, Function(startCountdownChoice)]
+
+            else:
+                textbutton i.caption
 
     if choice_menu != "":
         timer 4.0 action [SetVariable("wait_dialogue", wait_dialogue+1), Jump(choice_menu)]
@@ -308,7 +318,6 @@ style choice_button_text is default:
 
 ## Mash / Timer screens ########################################################
 init python:
-    import pygame
 
     def handleMash(key_pressed):
         global mash_count, max_mash, start_key, key_list, is_mashing, can_mash, fail_label, pass_label, mash_label, current_time, total_time
@@ -369,10 +378,11 @@ init python:
                 renpy.call(fail_label)
 
     def startCountdownChoice():
-        global do_start_timer, wait_dialogue, sprite1, sprite_changed, can_mash
+        global do_start_timer, wait_dialogue, sprite1, sprite_changed, can_mash, key_list
 
         if do_start_timer == False: ## if we aren't supposed to start the timer, don't call the countdown screen
             return
+            print("do start timer is false")
 
         else: ## if we are, call the countdown screen and reset the dialogue counter
             wait_dialogue = 0
@@ -449,8 +459,11 @@ screen countdown:
         value current_time
         range total_time
         xalign 0.5
-        ypos 700
+        ypos 650
         xsize 740
+        ysize 49
+
+    add "gui/bar/bar_frame.png" xalign 0.5 ypos 613
 
     key "dismiss" action [[]] ## prevents dialogue from progressing
 
@@ -474,20 +487,33 @@ screen quick_menu():
 
     if quick_menu:
 
-        hbox:
-            style_prefix "quick"
+        imagemap:
 
-            xalign 0.5
-            yalign 1.0
+            xalign 0.995
+            yalign 0.999
 
-            textbutton _("Back") action Rollback()
-            textbutton _("History") action ShowMenu('history')
-            textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
-            textbutton _("Auto") action Preference("auto-forward", "toggle")
-            textbutton _("Save") action ShowMenu('save')
-            textbutton _("Q.Save") action QuickSave()
-            textbutton _("Q.Load") action QuickLoad()
-            textbutton _("Prefs") action ShowMenu('preferences')
+            auto "gui/quick menu/q_menu_%s.png"
+
+            hotspot (8, 11, 300, 57) action ShowMenu('save')
+            hotspot (8, 63, 300, 57) action ShowMenu('load')
+            hotspot (8, 124, 300, 57) action ShowMenu('history')
+            hotspot (8, 175, 300, 57) action Skip() alternate Skip(fast=True, confirm=True)
+            hotspot (8, 235, 300, 57) action Preference("auto-forward", "toggle")
+
+        #hbox:
+        #    style_prefix "quick"
+
+        #    xalign 0.5
+        #    yalign 1.0
+
+        #    textbutton _("Back") action Rollback()
+        #    textbutton _("History") action ShowMenu('history')
+        #    textbutton _("Skip") action Skip() alternate Skip(fast=True, confirm=True)
+        #    textbutton _("Auto") action Preference("auto-forward", "toggle")
+        #    textbutton _("Save") action ShowMenu('save')
+        #    textbutton _("Q.Save") action QuickSave()
+        #    textbutton _("Q.Load") action QuickLoad()
+        #    textbutton _("Prefs") action ShowMenu('preferences')
 
 
 ## This code ensures that the quick_menu screen is displayed in-game, whenever
