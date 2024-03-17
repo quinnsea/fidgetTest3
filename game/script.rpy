@@ -47,10 +47,10 @@ default know_samantha = False
 label start:
 
     $ config.after_load_callbacks = [prepareLoad]
-    #$ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
-    #$ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
+    $ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
+    $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later
 
-    $ is_investigating = False
+    $ is_investigating = True
 
     #$ environment_items = ["box", "door-vines", "key", "lantern"] # make sure these match up with the file names in the folder
     $ inventory_item_names = ["mail", "grocery_list", "black_fabric", "champagne", "body", "head", "broken_door", "security_system", "wedding_ring", "footprints", "purse", "bite", "deja", "maddie", "taffy"]
@@ -72,12 +72,12 @@ label start:
     #"-- There are three possible conclusions, but none of them explain everything. --"
     #"-- Good luck! --"
 
-    #show screen dnd_ui # calling the ui for the inventory
+    show screen dnd_ui # calling the ui for the inventory
 
-    #jump setup_scene_maddies_house
+    jump setup_scene_maddies_house
 
     #jump mash_test_start
 
-    jump dialogue_demo_start
+    #jump dialogue_demo_start
 
     #return

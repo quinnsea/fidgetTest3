@@ -1,4 +1,4 @@
-default deja_bite_ask = False
+default deja_bite_asked = False
 
 label deja_intro:
     show deja investigate at center
@@ -15,10 +15,10 @@ label deja_intro:
         d "Good evening, Levi."
         l "Not so great when there's a murder..."
         "But I know she doesn't care about that."
-        "I can feel her smile getting wider as I think that."
+        "I can feel her smile getting wider as I think that, but more importantly I notice the big tear that makes up the bottom of her skirt."
         l "Something happen to your dress?"
         d "Oh, no, the designer made it that way."
-        "...To look torn?"
+        "...To look ripped?"
         "If that's the style, I guess that's the style."
 
 label deja_ask:
@@ -50,7 +50,7 @@ label deja_ask:
             jump deja_ask_end
 
 label deja_mail:
-    
+
     d "Jason Hughes is having an affair with our dearest Madeline...?"
     l "Yeah. Weird, huh?"
     d "Weird in regards to {i}Madeline.{/i} Not so much for Jason."
@@ -68,6 +68,7 @@ label deja_black_fabric:
     d "Nope."
     l "...Do you {i}know{/i} where it could've come from?"
     d "It looks a lot like the dress Madeline was wearing before I spilled champagne all over it."
+    "It also looks a lot like your dress that has the bottom suspiciously torn, but alright, Deja."
     "I take a whiff of the piece of fabric. It sure smells like it."
     l "How'd you spill it?"
     d "Do you remember how a certain former acquaintance of ours {i}became{/i} a former acquaintance?"
@@ -90,7 +91,7 @@ label deja_bite:
         l "More like a lot too late."
         l "Or..."
         d "Or...?"
-        "I blink when I realize I'm not sure whoever bit him."
+        "I blink when I realize I'm not sure who bit him."
 
         menu:
 

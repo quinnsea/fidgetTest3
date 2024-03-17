@@ -843,8 +843,6 @@ label m3_c3:
 
 label m3_c3_end:
 
-
-
 label m3_end:
 
     $ max_mash = 10.0

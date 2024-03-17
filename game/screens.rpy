@@ -99,12 +99,12 @@ style frame:
 #default current_dialogue = ""
 
 screen say(who, what):
-    if is_investigating == True and (who != None or who == "Levi") and current_item != None: ## added "or "levi"", might fuck up code
+    if is_investigating == True and (who != None and who != "Levi") and current_item != None:
 
         button:
             background "#FFFFFF"
             padding(25, 10)
-            align(0.9, 0.72)
+            align(0.8, 0.72)
             action [SetDict(inspect_dict, "{}_statement".format(who.lower()), what), ## save the suspect's statement with the current_item under their name
             SetVariable("{}_dict".format(current_item.replace(" ", "_").lower()), inspect_dict)] ## save the dictionary back to what it belongs to
             text "Save Statement" color "#000000" size 18
@@ -424,7 +424,7 @@ screen show_fail:
 
     if fail_fade > 0.0:
 
-        timer 0.1 action [SetVariable("fail_fade", fail_fade - 0.1), Hide("show_fail"), Show("show_fail")]
+        timer 0.01 action [SetVariable("fail_fade", fail_fade - 0.01), Hide("show_fail"), Show("show_fail")]
 
     else:
 

@@ -387,7 +387,7 @@ screen inspectItem(items):
         image inspect_dict["item_image_inspect"] at half_size align (0.4, 0.5)
 
         text "{}".format(inspect_dict["current_item"]) size 30 align (0.5, 0.28) color "#000000"
-        text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) xsize 300 ## show the description to the right of the image below
+        text "{}".format(inspect_dict["desc"]) size 25 align (0.6, 0.4) xsize 300 color "#ffffff" ## show the description to the right of the image below
         if inspect_dict["herring_action"] != "": ## show the red herring if it's been defined
             if inspect_dict["herring_culprit"] == "." or inspect_dict["herring_culprit"] == "": ## if there isn't a culprit or statement defined, don't worry about it
                 text "{}".format(inspect_dict["herring_action"] + inspect_dict["herring_culprit"]) size 25 align (0.6, 0.5) xsize 300 color "#FF0000"
@@ -413,20 +413,24 @@ screen characterSay(who = None, what = None): ## default values
 
     window:
         id "window"
+
         window:
             padding (20, 20)
 
-            if who is not None:
-                text who id "who"
-            else:
+            if who is not None or "":
                 id "namebox"
                 style "namebox"
-                text dnd_dialogue["who"]
+                text who id "who"
+
+            #else:
+
+                #text dnd_dialogue["who"]
 
         if what is not None:
-            text what id "what" xpos 0.25 ypos 0.4 xanchor 0.0
+            text what id "what" xpos 0.0 ypos 0.4 xanchor 0.0
+
         else:
-            text dnd_dialogue["what"][0] xpos 0.25 ypos 0.4 xanchor 0.0
+            text dnd_dialogue["what"][0] xpos 0.2 ypos 0.13 xanchor 0.0
 
     button:
         xfill True
@@ -437,11 +441,13 @@ screen characterSay(who = None, what = None): ## default values
         else:
             action Return(True)
 
-
     ## If there's a side image, display it above the text. Do not display on the
     ## phone variant - there's no room.
     if not renpy.variant("small"):
         add SideImage() xalign 0.0 yalign 1.0
+
+screen deduction_page:
+    ## 
 
 screen maddies_house_scene:
     add environment_SM
@@ -484,11 +490,6 @@ screen maddies_backyard_scene:
         align(0.3, 0.3)
         action [Hide("inventory"), Jump("setup_scene_maddies_house")]
         text "Go back inside" color "#000000" size 18
-
-    imagebutton:
-        auto "images/sprites/deja_invest_%s.png"
-        align(0.9, 0.8)
-        action [Hide("inventory"), Jump("deja_intro")]
 
 screen jasons_corpse_scene:
     add environment_SM
@@ -575,7 +576,7 @@ label setup_scene_maddies_house:
                     environment_sprites[-1].y = 200
 
                 elif item == "maddie":
-                    environment_sprites[-1].width = 500
+                    environment_sprites[-1].width = 300
                     environment_sprites[-1].height = 667
                     environment_sprites[-1].x = 1000
                     environment_sprites[-1].y = 500
@@ -588,7 +589,7 @@ label setup_scene_maddies_house:
 
 label setup_scene_maddies_backyard:
 
-    $ environment_items = ["black_fabric"]
+    $ environment_items = ["black_fabric", "deja"]
     $ current_scene = "maddies_backyard_scene"
 
     python:
@@ -619,6 +620,15 @@ label setup_scene_maddies_backyard:
                     environment_sprites[-1].x = 795 # positioning of each object in the scene
                     environment_sprites[-1].y = 200
 
+                elif item == "deja":
+                    environment_sprites[-1].width = 497 # make sure each image has its actual width and height
+                    environment_sprites[-1].height = 1116
+                    environment_sprites[-1].x = 1100 # positioning of each object in the scene
+                    environment_sprites[-1].y = 0
+
+                    #align(0.9, 0.8)
+
+
                 renpy.retain_after_load()
 
     scene maddies_backyard
@@ -642,8 +652,9 @@ label setup_scene_jasons_house:
         ie_overlap = False
 
         if "footprints" not in inventory_items:
-            characterSay(who = "", what = ["I open the door, and... Is that my target?", "I'm no stranger to dead bodies, but one that I didn't kill is a little terrifying.", "Putting it very lightly.", "I swallow my fear and try not to scream before a head tumbles down the staircase.", "I look up, and there's a figure pointing at me.", "They disappear into a cloud of mist.", "I'm... I stand stunned for a while.", "I don't move, is this the target? Or was that the target?", "Were they pointing at me because I'm next?!", "I think about leaving, but I get a little frustrated looking at the \nfootprints on the doormat.", "Since vampires usually can't shapeshift that often that quickly, \nthey might have came in through the back.", "Maybe. Depending on how old they are.", "I better find out who did this fast.", "My heart's already pounding. The last thing I want is a hit out on me."])
+            characterSay(who = "Levi", what = ["I open the door, and... Is that my target?", "I'm no stranger to dead bodies, but one that I didn't kill is a little terrifying.", "Putting it very lightly.", "I swallow my fear and try not to scream before a head tumbles down the \nstaircase.", "I look up, and there's a figure pointing at me.", "They disappear into a cloud of mist.", "I'm... I stand stunned for a while.", "I don't move, is this the target? Or was that the target?", "Were they pointing at me because I'm next?!", "I think about leaving, but I get a little frustrated looking at the \nfootprints on the doormat.", "Since vampires usually can't shapeshift that often that quickly, \nthey might have came in through the back.", "Maybe. Depending on how old they are.", "I better find out who did this fast.", "My heart's already pounding. The last thing I want is a hit out on me."])
             addToInventory(["footprints"])
+            seen_body = True
 
     python:
         for item in environment_items: # getting all the item info into an array FUCK arrays just DON'T touch this unless you absolutely have to
