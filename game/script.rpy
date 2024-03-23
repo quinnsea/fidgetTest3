@@ -46,6 +46,17 @@ default know_samantha = False
 
 label start:
 
+    menu:
+        "What'll it be? Test fidgetting or investigating?"
+
+        "Fidgetting (recommended before investigating)":
+            jump mash_test_start
+
+        "Investigating":
+            jump invest_setup
+
+label invest_setup:
+
     $ config.after_load_callbacks = [prepareLoad]
     $ config.rollback_enabled = False # disable the ability to rollback on choices for convenience for the p&c segments
     $ quick_menu = False # hide the quick menu, will create a quick menu that works with point and click segments later

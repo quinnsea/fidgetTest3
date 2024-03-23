@@ -320,7 +320,9 @@ style choice_button_text is default:
 init python:
 
     def handleMash(key_pressed):
-        global mash_count, max_mash, start_key, key_list, is_mashing, can_mash, fail_label, pass_label, mash_label, current_time, total_time
+        global mash_count, max_mash, start_key, key_list, is_mashing, can_mash, fail_label, pass_label, mash_label, current_time, total_time, choice_menu
+
+        print("handling mash")
 
         if (key_pressed == "e" and start_key == "q") or (key_pressed == "q" and start_key == "e"): # if we're in the q/e mash, make sure it only counts based on the last key
             print("in q/e mash")
@@ -350,6 +352,7 @@ init python:
         if mash_count >= max_mash: # if we've reached the counter
             is_mashing = False
             mash_count = 0.0
+            choice_menu = ""
 
             if start_key == "e": # make sure that q/e mash always counts as "q" no matter which key the player started with
                 start_key = "q"
@@ -373,12 +376,15 @@ init python:
                 print("failed the qte")
                 is_mashing = False
                 can_mash = False
+                current_time = 0.0
                 renpy.hide_screen("countdown")
                 renpy.show_screen("show_fail")
                 renpy.call(fail_label)
 
     def startCountdownChoice():
         global do_start_timer, wait_dialogue, sprite1, sprite_changed, can_mash, key_list
+
+        print("starting countdown on choice")
 
         if do_start_timer == False: ## if we aren't supposed to start the timer, don't call the countdown screen
             return
@@ -422,6 +428,8 @@ screen show_fail:
 
     image "dnd_test_files/UI/fail_icon.png" xalign 0.5 ypos 550 alpha (fail_fade/max_fail_fade)
 
+    $ choice_menu = ""
+
     if fail_fade > 0.0:
 
         timer 0.01 action [SetVariable("fail_fade", fail_fade - 0.01), Hide("show_fail"), Show("show_fail")]
@@ -453,7 +461,7 @@ screen countdown:
         SetVariable("qte_mash", 0), SetVariable("time_sprite_change", 1.0), SetVariable("can_mash", False), SetVariable("sprite_changed", False),
         Hide("sprite_change_screen"), Jump(sprite_catch_label), Hide("qte_screen")]
 
-    timer 0.01 repeat True action If(current_time > 0.0, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Show("show_fail"), Jump(fail_label)))
+    timer 0.01 repeat True action If(current_time > 0.0 and do_start_timer == True, true=SetVariable("current_time", current_time-0.01), false=(Hide("countdown"), Show("show_fail"), Jump(fail_label)))
 
     bar:
         value current_time

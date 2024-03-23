@@ -39,7 +39,7 @@ init python:
 
                                 if items_overlap == True:
                                     i_overlap = True
-                                    print(item1.type + " " + item2.type)
+                                    print(item1.type + " " + item2.type) ## need to add something that makes sure the right inspect menu opens up
 
                                     for dict in dict_list: ## for each dictionary in the dictionary list, do a for loop for that dictionary
 
@@ -62,6 +62,7 @@ init python:
                                         if temp_dict1["new_state"] != "": ## change the item image to a preset item image that Will Be Added To The Dictionaries
                                             temp_dict1["item_image_inventory"] = "test_case/evidence inventory/inventory_{}_{}.png".format(item1.type, temp_dict1["new_state"])
                                             temp_dict1["item_image_inspect"] = "test_case/evidence popup/{}_{}_popup.png".format(item1.type, temp_dict1["new_state"])
+                                            temp_dict1["state_changed"] = True
 
                                             t = Transform(child = temp_dict1["item_image_inventory"])
                                             inventory_sprites[inventory_items.index(temp_dict1["current_item"].replace(" ", "_").lower())].set_child(t)

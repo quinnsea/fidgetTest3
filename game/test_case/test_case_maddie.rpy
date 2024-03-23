@@ -14,22 +14,28 @@ label maddie_intro:
         menu:
             "What's with the green?":
                 $ champagne_dict["desc"] += " Got Maddie's black dress dirty."
+                if "champagne" not in black_fabric_dict["desc"]:
+                    $ black_fabric_dict["desc"] += " Has champagne on it."
                 m "Oh, y'know."
                 m "Deja popped the champagne and almost took my eye out."
                 l "You alright?"
-                m "Yeah, just wish I had a better dress."
+                m "Yeah, just wish I had another black dress."
                 jump maddie_intro_cont
+
             "What's with the smile?":
                 m "I-Is it that weird to smile at someone I haven't seen in over a year?"
                 jump maddie_intro_cont
     else:
-        jump maddie_ask
+        m "Hope you're having fun."
+        jump maddie_ask_end
 
 label maddie_intro_cont:
     m "Anyways, gotta host. Hope you're having fun."
     m "Deja told me to let you know that there's... something you should check out next door? At Jason's?"
     m "She's out back if you need her. Or some quiet."
     m "...And it's good to see you."
+
+    jump maddie_ask_end
 
 label maddie_ask:
     menu:
@@ -135,6 +141,13 @@ label maddie_head:
     m "A terrible one, but hey. If she was doing some 'favors' for Jason, it doesn't really matter."
     l "Terrible as in 'hard to work with' or terrible as in 'no talent'?"
     m "You want me to {i}choose?{/i}"
+    m "I'd seriously kick her off my cast if I could, but my hands are tied every time I gotta work with Jason."
+    "Maddie seems to be tensing up at the mention of that. If I squint, I think I can see her shaking a bit."
+    "This must really piss her off."
+    l "You alright?"
+    m "What?"
+    m "Oh, yeah. Yeah, I'm fine."
+    m "Just considering the existential dread of probably having to make her the lead one day."
 
     jump maddie_ask_end
 
@@ -252,6 +265,7 @@ label maddie_purse2:
     "It's just a question. An honest question. This one should be easy, just make it clear."
 
 label maddie_purse2_pass:
+    $ purse_dict["desc"] += " Could've had her phone in it."
     m "The basics. Phone, wallet, keys."
     m "Keys might be pushing it, though. It's a little small."
     l "But not too small to be just an accessory?"

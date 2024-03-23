@@ -14,11 +14,10 @@ label taffy_intro:
         ta "Taffy. I helped with the writing."
         l "Levi. Dion's just my stage name."
 
-    #if seen_body == False:
-    #    jump taffy_ask_end
-    #else:
-    #    jump taffy_ask
-    jump taffy_ask
+    elif seen_taffy == True:
+        ta "Kinda hope this movie doesn't get a sequel..."
+        
+    jump taffy_ask_end
 
 label taffy_ask:
     menu:
@@ -69,10 +68,12 @@ label taffy_mail:
 
             "You know Jason?":
                 $ taffy_ask_jason = True
+                $ jason_money = True
 
                 ta "Hard not to. He's a pretty big producer."
                 ta "Or {i}was.{/i} I think Maddie's his last lifeline."
                 ta "And now... we know why..."
+                ta "I thought it was because he owed a lot of people a lot of money, but I guess not."
                 jump taffy_mail_cont
 
             "(Don't say anything)":

@@ -8,7 +8,8 @@ default grocery_list_dict = {
     "desc": "Found on the fridge in Maddie's house.", ## default description
     "item_search": "mail", ## what item can they wanna combine with
     "item_search_remove": "grocery_list", ## if they combine, which item is getting axed
-    "new_state": "", ## after being combined, what does the non-removed item become
+    "new_state": "", "state_changed": False, ## after being combined, what does the non-removed item become
+    "state_changed": False, ##
     "found_dialogue": [], ## when found, what does levi say
     "combine_dialogue": [], ## when combined, what does levi say
     "deduction": "", ## what's the current deduction for the item
@@ -30,6 +31,7 @@ default mail_dict = {
     "item_search": "grocery_list",
     "item_search_remove": "grocery_list",
     "new_state": "checked",
+    "state_changed": False,
     "found_dialogue": ["...Maddie's having an affair with Jason Hughes and wants to confront him about it?", "She's so pissed she handwrote the letter, but I wonder if it's actually her handwriting."],
     "combine_dialogue": ["Yeah, this is definitely Maddie's handwriting"],
     "deduction": "",
@@ -51,6 +53,7 @@ default black_fabric_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -72,6 +75,7 @@ default champagne_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -93,6 +97,7 @@ default body_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -114,6 +119,7 @@ default head_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": ["I check the mouth out of instinct.", "She's definitely a vampire. Right down to the black blood.", "Who got my target first?"],
     "combine_dialogue": [],
     "deduction": "",
@@ -135,6 +141,7 @@ default broken_door_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": ["I try to open the door to the backyard, but there's no use. It's jammed.", "Still, good to know."],
     "combine_dialogue": [],
     "deduction": "",
@@ -156,6 +163,7 @@ default security_system_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -177,6 +185,7 @@ default wedding_ring_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": ["Is it wrong to steal someone's wedding ring?", "...No. No, I don't really feel bad about it if it is."],
     "combine_dialogue": [],
     "deduction": "",
@@ -198,6 +207,7 @@ default footprints_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -219,6 +229,7 @@ default purse_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": ["...There's nothing in this purse?"],
     "combine_dialogue": [],
     "deduction": "",
@@ -240,6 +251,7 @@ default bite_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": ["So a vampire killed him.", "I wonder if it was whoever killed the victim.", "It looks like he gets bitten a lot..."],
     "combine_dialogue": [],
     "deduction": "",
@@ -260,6 +272,7 @@ default deja_bio = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -280,6 +293,7 @@ default maddie_bio = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -300,6 +314,7 @@ default taffy_bio = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",

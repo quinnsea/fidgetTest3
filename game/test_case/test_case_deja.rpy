@@ -1,4 +1,5 @@
 default deja_bite_asked = False
+default jason_money = False
 
 label deja_intro:
     show deja investigate at center
@@ -8,9 +9,7 @@ label deja_intro:
         d "Don't talk to me until you've gotten the head."
         "Oh, there's a vampire to kill next door. Gotcha."
 
-        jump deja_ask_end
-
-    if seen_deja == False:
+    elif seen_deja == False:
         $ seen_deja = True
         d "Good evening, Levi."
         l "Not so great when there's a murder..."
@@ -20,6 +19,23 @@ label deja_intro:
         d "Oh, no, the designer made it that way."
         "...To look ripped?"
         "If that's the style, I guess that's the style."
+
+    elif seen_deja == True and jason_money == False:
+        $ jason_money = True
+        d "I'm a little bit annoyed that Jason's gone."
+        l "Just... annoyed?"
+        d "Yeah."
+        d "He owed me about 65 grand."
+        l "How did you have that much money to give out?!?!"
+        d "You're just about as rich as I am."
+        "But my house payments are way higher than yours..."
+        d "I'm not the only person he owes money."
+        d "...Probably divine intervention."
+
+    else:
+        d "Don't stress yourself out too much. You'll survive. This time."
+
+    jump deja_ask_end
 
 label deja_ask:
     menu:
@@ -51,6 +67,8 @@ label deja_ask:
 
 label deja_mail:
 
+    $ jason_money = True
+
     d "Jason Hughes is having an affair with our dearest Madeline...?"
     l "Yeah. Weird, huh?"
     d "Weird in regards to {i}Madeline.{/i} Not so much for Jason."
@@ -62,22 +80,39 @@ label deja_mail:
 
 label deja_black_fabric:
 
-    d "Oh, that."
-    d "I have no idea where it came from."
-    l "...Did you even notice it until I pointed it out."
-    d "Nope."
-    l "...Do you {i}know{/i} where it could've come from?"
-    d "It looks a lot like the dress Madeline was wearing before I spilled champagne all over it."
-    "It also looks a lot like your dress that has the bottom suspiciously torn, but alright, Deja."
-    "I take a whiff of the piece of fabric. It sure smells like it."
-    l "How'd you spill it?"
-    d "Do you remember how a certain former acquaintance of ours {i}became{/i} a former acquaintance?"
-    "I sigh. I'm so disappointed in her."
-    l "Someone let you pop a champagne cork?"
-    d "Taffy insisted! He told me he could help!"
-    l "Thanks, Deja..."
+    ## maybe deja can take this and update the description when she does?
+    ## deja only takes this if you already talked to maddie about the champagne
+
     if "champagne" not in black_fabric_dict["desc"]:
         $ black_fabric_dict["desc"] += " Smells like champagne."
+        d "Oh, that."
+        d "I have no idea where it came from."
+        l "...Did you even notice it until I pointed it out."
+        d "Nope."
+        l "...Do you {i}know{/i} where it could've come from?"
+        d "It looks a lot like the dress Madeline was wearing before I spilled champagne all over it."
+        "It also looks a lot like your dress that has the bottom suspiciously torn, but alright, Deja."
+        "I take a whiff of the piece of fabric. It sure smells like it."
+        l "How'd you spill it?"
+        d "Do you remember how a certain former acquaintance of ours {i}became{/i} a former acquaintance?"
+        "I sigh. I'm so disappointed in her."
+        l "Someone let you pop a champagne cork?"
+        d "Taffy insisted! He told me he could help!"
+        l "Thanks, Deja..."
+        "-- Evidence description has been updated. --"
+
+    else:
+        "I can't help but compare the fabric to her dress."
+        "Looks the same. And it was caught on the fence."
+        l "Deja, is this yours?"
+        "I show her the fabric, and she quickly takes it out of my hands."
+        d "I don't know what you're talking about."
+        $ black_fabric_dict["state_changed"] = True
+        python:
+            for item in inventory_sprites:
+                if item.type == "black_fabric":
+                    removeInventoryItem(item)
+        "Shit, I hope I have a good mental note saved for that already."
 
     jump deja_ask_end
 
@@ -122,6 +157,7 @@ label deja_bite:
 
 label deja_bite_end:
 
+    "-- Evidence description has been updated. --"
     d "Actually, that reminds me."
     d "Mh'elkug, The All Seer, wants to know if you're interested in joining the Cult."
     l "He always talks to you through that necklace, right?"
@@ -233,7 +269,7 @@ label deja_security_system:
 label deja_default:
     d "Unfamiliar."
 
-    jump deja_ask
+    jump deja_ask_end
 
 label deja_ask_end:
 

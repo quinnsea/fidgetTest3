@@ -2,9 +2,59 @@
 errors listed below, and try again.
 
 
-File "game/screens.rpy", line 458: 'zorder' is not a keyword argument or valid child of the add statement.
-    add "gui/bar/bar_frame.png" xalign 0.5 ypos 700 zorder 99
-                                                          ^
+The label m2_c1 is defined twice, at File "game/dialogue_demo.rpy", line 483:
+label m2_c1:
+and File "game/mash_test.rpy", line 192:
+label m2_c1:
+
+
+The label m2_c1_pass is defined twice, at File "game/dialogue_demo.rpy", line 487:
+label m2_c1_pass:
+and File "game/mash_test.rpy", line 196:
+label m2_c1_pass:
+
+
+The label m2_c2 is defined twice, at File "game/dialogue_demo.rpy", line 528:
+label m2_c2:
+and File "game/mash_test.rpy", line 208:
+label m2_c2:
+
+
+The label m2_c2_pass is defined twice, at File "game/dialogue_demo.rpy", line 542:
+label m2_c2_pass:
+and File "game/mash_test.rpy", line 214:
+label m2_c2_pass:
+
+
+The label m3_c1 is defined twice, at File "game/dialogue_demo.rpy", line 750:
+label m3_c1:
+and File "game/mash_test.rpy", line 331:
+label m3_c1:
+
+
+The label m3_c1_pass is defined twice, at File "game/dialogue_demo.rpy", line 760:
+label m3_c1_pass:
+and File "game/mash_test.rpy", line 340:
+label m3_c1_pass:
+
+
+The label m3_c2 is defined twice, at File "game/dialogue_demo.rpy", line 791:
+label m3_c2:
+and File "game/mash_test.rpy", line 352:
+label m3_c2:
+
+
+The label m3_c2_pass is defined twice, at File "game/dialogue_demo.rpy", line 801:
+label m3_c2_pass:
+and File "game/mash_test.rpy", line 359:
+label m3_c2_pass:
+
+
+The label m3_c3 is defined twice, at File "game/dialogue_demo.rpy", line 830:
+label m3_c3:
+and File "game/mash_test.rpy", line 370:
+label m3_c3:
+
 
 Ren'Py Version: Ren'Py 8.1.1.23060707
-Sun Mar 10 19:37:08 2024
+Tue Mar 19 23:58:22 2024

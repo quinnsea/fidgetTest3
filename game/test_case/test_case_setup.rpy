@@ -3,6 +3,13 @@ screen dnd_ui:
     image "dnd_test_files/UI/inventory-icon-bg.png" xpos 0.0 ypos 0.8
     imagebutton auto "dnd_test_files/UI/inventory-icon-%s.png" action If(renpy.get_screen("inventory") == None, true=Show("inventory"), false=Hide("inventory")) xpos 0.03 ypos 0.835
 
+    button:
+        background "#FFFFFF"
+        padding(25, 10)
+        align(0.05, 0.8)
+        action Show("deduction_page")
+        text "Make deduction" color "#000000" size 18
+
 screen inventory:
     image "dnd_test_files/UI/inventory-bg.png" xpos 0.17 ypos 0.81
     image "dnd_test_files/UI/inventory-slots.png" xpos 0.25 ypos 0.85
@@ -57,6 +64,7 @@ default inspect_dict = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -81,6 +89,7 @@ default suspect_bio = {
     "item_search": "",
     "item_search_remove": "",
     "new_state": "",
+    "state_changed": False,
     "found_dialogue": [],
     "combine_dialogue": [],
     "deduction": "",
@@ -91,7 +100,7 @@ default suspect_bio = {
     "taffy_statement": ""
 }
 
-default evidence_options_list_a = ["Was taken by", "Was used by", "Was planted by", "Was broken by", "Was hidden by", "Was on", "Was dropped by", "Belongs to"] ##"Was lost by", "Was thrown by"
+default evidence_options_list_a = ["Was taken by", "Was used by", "Was hidden by", "Was on", "Was dropped by", "Belongs to", "Was lost by", "Was thrown by"] ##"Was lost by", "Was thrown by"
 default evidence_options_list_b = ["Deja", "Taffy", "Maddie"] ## update this list when discovering new people
 default suspect_list_padding = 50
 default dropdown_visible = False
@@ -447,7 +456,72 @@ screen characterSay(who = None, what = None): ## default values
         add SideImage() xalign 0.0 yalign 1.0
 
 screen deduction_page:
-    ## 
+    ##have spaces for a few different buttons
+    ##these buttons (for now) will bring up choice menus that dynamically fill based on item deductions
+    ##in theory, each space for a button will populate with an image but that's fine we're still figuring it out
+
+    if renpy.get_screen("say"): ## if dialogue is happening, don't do anything
+        pass
+    else: ## if dialogue is not doing anything, enable the ability to click out of the window
+        button:
+            # everything outside the frame is a transparent button to hide the screen
+            background None
+            action Hide("deduction_page")
+
+    frame:
+        ysize 950
+        xsize 1300
+        align (0.5, 0.5)
+
+        text "What happened?" color "#FFFFFF" size 40 align (0.5, 0.05)
+
+        #python:
+        #    print(inv_item)
+
+        hbox:
+            xalign 0.5
+            yalign 0.3
+            spacing 25
+
+            button:
+                background "#FFFFFF"
+                padding(25, 50)
+                align(0.1, 0.3)
+                action Jump("deduction_q1")
+                text "How did the killer get in?" color "#000000" size 18
+
+            button:
+                background "#FFFFFF"
+                padding(25, 50)
+                align(0.7, 0.3)
+                action Jump("deduction_q2")
+                text "Why did they kill the victim?" color "#000000" size 18
+
+            button:
+                background "#FFFFFF"
+                padding(25, 50)
+                align(1, 0.3)
+                action Jump("deduction_q3")
+                text "Who was the real target?" color "#000000" size 18
+
+        hbox:
+            xalign 0.5
+            yalign 0.6
+            spacing 25
+
+            button:
+                background "#FFFFFF"
+                padding(25, 50)
+                align(0.4, 0.5)
+                action Jump("deduction_q4")
+                text "How did the killer get out?" color "#000000" size 18
+
+            button:
+                background "#FFFFFF"
+                padding(25, 50)
+                align(0.7, 0.5)
+                action Jump("deduction_q5")
+                text "How did the killer cover their tracks?" color "#000000" size 18
 
 screen maddies_house_scene:
     add environment_SM
@@ -706,7 +780,7 @@ label setup_scene_jasons_house:
 label setup_scene_jasons_corpse:
 
     $ environment_items = ["bite", "wedding_ring"]
-    $ current_scene = "jasons_corpse"
+    $ current_scene = "jasons_corpse_scene"
 
     python:
         ## delete any potential items from other scenes carrying over
@@ -833,11 +907,11 @@ label conclusion_grading:
 label end_grading:
     python:
         renpy.retain_after_load()
-    if current_scene == "maddies_backyard_scene":
+    if current_scene == "setup_scene_maddies_backyard":
         call screen maddies_backyard_scene
-    elif current_scene == "jasons_house_scene":
+    elif current_scene == "setup_scene_jasons_house":
         call screen jasons_house_scene
-    elif current_scene == "jasons_corpse_scene":
+    elif current_scene == "setup_scene_jasons_corpse":
         call screen jasons_corpse_scene
     else:
         call screen maddies_house_scene
