@@ -35,7 +35,7 @@ label deduction_q1:
         "??? (disabled)" if footprints_dict["action"] != "Belongs to" or footprints_dict["herring_action"] == "Doesn't matter":
             pass
 
-        "Over the fence, through the back door" if black_fabric_dict["action"] == "Was on" or black_fabric_dict["action"] == "Was dropped by" or black_fabric_dict["action"] == "Belongs to":
+        "Over the fence, through the back door" if black_fabric_dict["action"] == "Was on" or black_fabric_dict["action"] == "Was dropped by" or black_fabric_dict["action"] == "Belongs to" or black_fabric_dict["state_changed"] == True:
 
             "That piece of black fabric was caught on the fence."
             "Maddie normally wears all black, and Deja's black dress was a little torn."
@@ -186,10 +186,10 @@ label deduction_q5:
     menu:
         "How did the killer cover their tracks?"
 
-        "??? (disabled)" if broken_door_dict["herring_action"] != "Was broken by":
+        "??? (disabled)" if broken_door_dict["herring_action"] != "Was broken by" and broken_door_dict["herring_action"] != "Was tampered with by": ## put "was tampered with by" as a possible "or"
             pass
 
-        "Broke the back door" if broken_door_dict["herring_action"] == "Was broken by":
+        "Broke the back door" if broken_door_dict["herring_action"] == "Was broken by" or broken_door_dict["herring_action"] == "Was tampered with by": ## put "was tampered with by"
             $ deduction_5 = "broke door"
             "If the killer broke the back door, it'd get rid of any reason for someone to think they jumped the fence."
 
@@ -265,6 +265,7 @@ label deduction_check:
 
     if deduction_5 == "broke door":
         $ deja_culprit_points += 1
+        $ maddie_culprit_points += 1
 
     elif deduction_5 == "planted fabric":
         $ maddie_culprit_points += 1

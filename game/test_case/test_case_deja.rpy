@@ -112,7 +112,6 @@ label deja_black_fabric:
             for item in inventory_sprites:
                 if item.type == "black_fabric":
                     removeInventoryItem(item)
-        "Shit, I hope I have a good mental note saved for that already."
 
     jump deja_ask_end
 
