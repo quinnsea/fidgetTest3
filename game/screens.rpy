@@ -276,6 +276,8 @@ screen choice(items):
 
                 if " (disabled)" in i.caption:
                     textbutton i.caption.replace(" (disabled)", "") action None
+                if " (no mash)" in i.caption:
+                    textbutton i.caption.replace(" (no mash)", "") action [SetVariable("do_start_timer", False), i.action]
                 else:
                     textbutton i.caption action [i.action, Function(startCountdownChoice)]
 

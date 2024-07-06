@@ -171,11 +171,11 @@ label menu2:
     menu:
         t "[menu_dialogue]"
 
-        "Can you get us started with some wine?":
-            $ pass_label = "m2_c1_pass"
-            $ mash_label = "m2_c1"
-            $ key_list = ["2"]
-            jump m2_c1
+        "Can you get us started with some wine? (no mash)":
+            #$ pass_label = "m2_c1_pass"
+            #$ mash_label = "m2_c1"
+            #$ key_list = ["2"]
+            jump m2_c1_pass
 
         "What do you want, Taffy?":
             $ pass_label = "m2_c2_pass"
@@ -217,7 +217,7 @@ label m2_c2_pass:
     t "Well... I'm not sure yet either. Can I get some more time to look?"
     "The waiter leaves and gives us some more time with the menu."
 
-jump menu2_end
+    jump menu2_end
 
 label m2_c3:
     if len(key_list) == 2:
